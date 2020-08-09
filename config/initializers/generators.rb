@@ -1,4 +1,4 @@
-Rails.application.config.gererators do |g|
+Rails.application.config.generators do |g|
   g.helper false
   g.assets false
   g.template_engine :erb
