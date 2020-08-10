@@ -9,7 +9,7 @@
     <% if @minimum_password_length %>
       <em><%= t('devise.shared.minimum_password_length', count: @minimum_password_length) %></em><br />
     <% end %>
-    <%= f.password_field :password, autofocus: true, autocomplete: "new-password" %>
+    <%= f.password_field :password, autofocus: true, autocomplete: "new-password", required: true, minlength: @minimum_password_length, maxlength: '30' %>
   </div>
 
   <div class="field">
