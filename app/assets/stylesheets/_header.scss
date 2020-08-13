@@ -8,12 +8,36 @@
   padding: 20px 30px;
   background: skyblue;
 
+  &__logo {
+    font-size: 30px;
+    font-family: 'Futura', sans-serif;
+  }
+
   &__menu {
     display: flex;
 
     &-item {
-      padding: 0 10px;
-      margin: 0 20px;
+      margin-right: 20px;
+      border-radius: 9px;
+
+      & a {
+        padding: 20px;
+      }
+
+      &:hover {
+        cursor: pointer;
+        background-color: rgba(white, 0.8);
+        transition: .3s;
+      }
+
+      &.primary {
+        background-color: #f77261;
+        border: 2px solid white;
+
+        &:hover {
+          background-color: #fa513b;
+        }
+      }
     }
   }
 }

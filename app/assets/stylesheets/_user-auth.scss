@@ -1,0 +1,30 @@
+.user-auth {
+  margin: 0 auto;
+  width: 360px;
+  padding: 30px;
+  border: 5px solid #f1f1f1;
+
+  &__title {
+    font-size: 27px;
+  }
+
+  &__form {
+    margin: 20px 0;
+
+    &-field {
+      margin-bottom: 15px;
+
+      label {
+        display: none;
+      }
+
+      input {
+        width: 100%;
+      }
+    }
+
+    .btn {
+      width: 100%;
+    }
+  }
+}
