@@ -1,7 +1,7 @@
 ## snippetアプリを作成
 
 ### 概要
-RailsでSnippetアプリを作成しています。  
+`Rails`でSnippetアプリを作成しています。  
 現在作成中。
 
 ### 開発環境

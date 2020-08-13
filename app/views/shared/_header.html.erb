@@ -1,24 +1,22 @@
-<header>
+<header class="header">
+  <%= link_to "Snippets", root_path, class: "header__logo" %>
   <nav>
-    <%= link_to "Snippets", root_path %>
-    <div id="Navber">
-      <ul>
-        <% if user_signed_in? %>
-          <li>
-            <%= link_to 'アカウント編集', edit_user_registration_path %>
-          </li>
-          <li>
-            <%= link_to 'ログアウト', destroy_user_session_path, method: :delete %>
-          </li>
-      <% else %>
-          <li>
-            <%= link_to "新規登録", new_user_registration_path %>
-          </li>
-          <li>
-            <%= link_to "ログイン", new_user_session_path %>
-          </li>
-        <% end %>
-      </ul>
-    </div>
+    <ul class="header__menu">
+      <% if user_signed_in? %>
+        <li class="header__menu-item">
+          <%= link_to 'アカウント編集', edit_user_registration_path %>
+        </li>
+        <li class="header__menu-item">
+          <%= link_to 'ログアウト', destroy_user_session_path, method: :delete %>
+        </li>
+    <% else %>
+        <li class="header__menu-item primary">
+          <%= link_to "新規登録", new_user_registration_path %>
+        </li>
+        <li class="header__menu-item">
+          <%= link_to "ログイン", new_user_session_path %>
+        </li>
+      <% end %>
+    </ul>
   </nav>
 </header>
