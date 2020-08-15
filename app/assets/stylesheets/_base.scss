@@ -4,7 +4,11 @@ body {
 }
 
 a {
-  color: #232323;
+  color: rgb(0, 112, 210);
+  cursor: pointer;
   text-decoration: none;
-  display: block;
+
+  &:hover {
+    text-decoration: underline;
+  }
 }
