@@ -9,7 +9,7 @@ class PostsController < ApplicationController
 
   def create
     Post.create(post_params)
-    redirect_to action: :index
+    redirect_to posts_url, notice: "投稿しました。"
   end
 
   def show
@@ -23,13 +23,13 @@ class PostsController < ApplicationController
   def update
     post = Post.find(params[:id])
     post.update(post_params)
-    redirect_to action: :index
+    redirect_to posts_url, notice: "更新しました。"
   end
 
   def destroy
     post = Post.find(params[:id])
     post.destroy
-    redirect_to action: :index
+    redirect_to posts_url, alert: "削除しました。"
   end
 
   private
