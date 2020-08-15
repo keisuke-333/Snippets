@@ -1,0 +1,12 @@
+<h1>一覧画面</h1>
+<% @posts.each do |post| %>
+  <p>
+    <%= post.title %>
+    <%= post.language %>
+    <%= post.code %>
+    <%= link_to '詳細', post %>
+    <%= link_to '編集', edit_post_path(post) %>
+    <%= link_to '削除', post, method: :delete, data: {confirm: '削除しますか？'} %>
+  </p>
+<% end %>
+<%= link_to '投稿画面へ', new_post_path %>

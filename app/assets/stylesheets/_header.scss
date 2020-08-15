@@ -9,6 +9,7 @@
   background: skyblue;
 
   &__logo {
+    color: #232323;
     font-size: 30px;
     font-family: 'Futura', sans-serif;
   }
@@ -21,11 +22,12 @@
       border-radius: 9px;
 
       & a {
+        color: #232323;
+        display: block;
         padding: 20px;
       }
 
       &:hover {
-        cursor: pointer;
         background-color: rgba(white, 0.8);
         transition: .3s;
       }
