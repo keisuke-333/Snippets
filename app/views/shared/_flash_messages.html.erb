@@ -1,5 +1,3 @@
-<div class="flash">
-  <% flash.each do |flash_type, msg| %>
-    <%= content_tag :p, msg, class: flash_type %>
-  <% end %>
-</div>
+<% flash.each do |flash_type, msg| %>
+  <%= content_tag :p, msg, class: ["flash", flash_type] %>
+<% end %>
