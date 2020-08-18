@@ -2,15 +2,18 @@
   <%= form_with model: @post, local: true do |f| %>
 
     <div class="field">
-      タイトル：<%= f.text_field :title %>
+      <%= f.label :title %>
+      <%= f.text_field :title %>
     </div>
 
     <div class="field">
-      言語：<%= f.select :language, [ ['HTML', 0], ['CSS', 1], ['JavaScript', 2], ['Ruby', 3], ['Ruby on Rails', 4] ] %>
+      <%= f.label :language %>
+      <%= f.select :language, [ ['HTML', 0], ['CSS', 1], ['JavaScript', 2], ['Ruby', 3], ['Ruby on Rails', 4] ] %>
     </div>
 
     <div class="field">
-      コード：<%= f.text_area :code, size: '30x3' %>
+      <%= f.label :code %>
+      <%= f.text_area :code, size: '30x3' %>
     </div>
 
     <div>
