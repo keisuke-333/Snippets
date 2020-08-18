@@ -10,8 +10,12 @@ class PostsController < ApplicationController
   end
 
   def create
-    Post.create(post_params)
-    redirect_to posts_url, notice: "投稿しました。"
+    @post = Post.new(post_params)
+    if @post.save
+      redirect_to posts_url, notice: "投稿しました。"
+    else
+      render :new
+    end
   end
 
   def show
@@ -21,8 +25,12 @@ class PostsController < ApplicationController
   end
 
   def update
-    @post.update(post_params)
-    redirect_to posts_url, notice: "更新しました。"
+    @post = Post.new(post_params)
+    if @post.save
+      redirect_to posts_url, notice: "更新しました。"
+    else
+      render :edit
+    end
   end
 
   def destroy

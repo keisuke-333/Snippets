@@ -1,16 +1,25 @@
-<div class="form">
+<div class="post-form">
   <%= form_with model: @post, local: true do |f| %>
 
-    <div class="field">
-      タイトル：<%= f.text_field :title %>
+    <div class="post-form__field">
+      <%= f.text_field :title, placeholder: "タイトル" %>
+      <% if @post.errors.include?(:title) %>
+        <p class="post-form__msg"><%= @post.errors.full_messages_for(:title).first %></p>
+      <% end %>
     </div>
 
-    <div class="field">
-      言語：<%= f.select :language, [ ['HTML', 0], ['CSS', 1], ['JavaScript', 2], ['Ruby', 3], ['Ruby on Rails', 4] ] %>
+    <div class="post-form__field">
+      <%= f.select :language, [ ['HTML', 0], ['CSS', 1], ['JavaScript', 2], ['Ruby', 3], ['Ruby on Rails', 4] ] %>
+      <% if @post.errors.include?(:language) %>
+        <p class="post-form__msg"><%= @post.errors.full_messages_for(:language).first %></p>
+      <% end %>
     </div>
 
-    <div class="field">
-      コード：<%= f.text_area :code, size: '30x3' %>
+    <div class="post-form__field">
+      <%= f.text_area :code, size: '30x3', placeholder: "コード" %>
+      <% if @post.errors.include?(:code) %>
+        <p class="post-form__msg"><%= @post.errors.full_messages_for(:code).first %></p>
+      <% end %>
     </div>
 
     <div>
