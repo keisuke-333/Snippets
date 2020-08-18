@@ -14,7 +14,6 @@ class PostsController < ApplicationController
     if @post.save
       redirect_to posts_url, notice: "投稿しました。"
     else
-      flash.now[:alert] = "投稿に失敗しました。"
       render :new
     end
   end
@@ -30,7 +29,6 @@ class PostsController < ApplicationController
     if @post.save
       redirect_to posts_url, notice: "更新しました。"
     else
-      flash.now[:alert] = "更新に失敗しました。"
       render :edit
     end
   end

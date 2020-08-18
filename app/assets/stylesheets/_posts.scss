@@ -1,8 +1,15 @@
-div.field_with_errors {
-  display: contents;
+.post-form {
+  &__msg {
+    color: red;
+  }
 
-  input,
-  textarea {
-    border: 2px solid red;
+  .field_with_errors {
+    display: contents;
+
+    input,
+    textarea {
+      border: 2px solid red;
+      background: #f7dcd9;
+    }
   }
 }
