@@ -2,7 +2,7 @@
   <%= form_with model: @post, local: true do |f| %>
 
     <div class="post-form__field">
-      <%= f.text_field :title, placeholder: "タイトル" %>
+      <%= f.text_field :title, placeholder: "タイトル", required: true, maxlength: 50 %>
       <% if @post.errors.include?(:title) %>
         <p class="post-form__msg"><%= @post.errors.full_messages_for(:title).first %></p>
       <% end %>
@@ -16,7 +16,7 @@
     </div>
 
     <div class="post-form__field">
-      <%= f.text_area :code, size: '30x3', placeholder: "コード" %>
+      <%= f.text_area :code, size: '30x3', placeholder: "コード", required: true %>
       <% if @post.errors.include?(:code) %>
         <p class="post-form__msg"><%= @post.errors.full_messages_for(:code).first %></p>
       <% end %>
