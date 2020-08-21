@@ -10,7 +10,7 @@
   </div>
 
   <div>
-    コード：<%= @post.code %>
+    コード：<%= simple_format(h @post.code) %>
   </div>
 </div>
 <%= link_to '一覧画面へ', posts_path %>

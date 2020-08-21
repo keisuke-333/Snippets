@@ -8,6 +8,10 @@
   padding: 20px 30px;
   background: skyblue;
 
+  & a:hover {
+    text-decoration: none;
+  }
+
   &__logo {
     color: #232323;
     font-size: 30px;
