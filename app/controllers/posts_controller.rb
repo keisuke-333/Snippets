@@ -1,8 +1,9 @@
 class PostsController < ApplicationController
+  before_action :authenticate_user!
   before_action :set_post, only: [:show, :edit, :update, :destroy]
 
   def index
-    @posts = Post.all
+    @posts = Post.all.order(created_at: :desc)
   end
 
   def new
@@ -11,6 +12,7 @@ class PostsController < ApplicationController
 
   def create
     @post = Post.new(post_params)
+    @post.user_id = current_user.id
     if @post.save
       redirect_to posts_url, notice: "投稿しました。"
     else
@@ -25,8 +27,7 @@ class PostsController < ApplicationController
   end
 
   def update
-    @post = Post.new(post_params)
-    if @post.save
+    if @post.update(post_params)
       redirect_to posts_url, notice: "更新しました。"
     else
       render :edit
