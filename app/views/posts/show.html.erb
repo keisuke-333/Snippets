@@ -1,9 +1,6 @@
-<div>
-  <h1>詳細</h1>
-  
-  <div>
-    タイトル：<%= @post.title %>
-  </div>
+<div class="container-center">
+
+  <h1><%= @post.title %></h1>
 
   <div>
     言語：<%= @post.language %>
@@ -12,5 +9,9 @@
   <div>
     コード：<%= simple_format(h @post.code) %>
   </div>
+
+  <div class="posts__link">
+    <%= link_to '一覧画面へ', posts_path %>
+  </div>
+
 </div>
-<%= link_to '一覧画面へ', posts_path %>
