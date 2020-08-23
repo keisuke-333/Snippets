@@ -5,6 +5,11 @@
       <%= render "devise/shared/error_messages", resource: resource %>
 
       <div class="user-auth__form-field">
+        <%= f.label :name %><br />
+        <%= f.text_field :name, autofocus: true, autocomplete: "name", placeholder: "ユーザ名", required: true, maxlength: '10' %>
+      </div>
+
+      <div class="user-auth__form-field">
         <%= f.label :email %><br />
         <%= f.email_field :email, autofocus: true, autocomplete: "email", placeholder: "メールアドレス", required: true, maxlength: '100' %>
       </div>
