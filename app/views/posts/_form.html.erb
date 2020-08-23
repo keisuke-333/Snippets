@@ -9,7 +9,7 @@
     </div>
 
     <div class="post-form__field">
-      <%= f.select :language, [ ['HTML', 0], ['CSS', 1], ['JavaScript', 2], ['Ruby', 3], ['Ruby on Rails', 4] ] %>
+      <%= f.select :language, [ ['HTML', 'HTML'], ['CSS', 'CSS'], ['JavaScript', 'JavaScript'], ['Ruby', 'Ruby'], ['Ruby on Rails', 'Ruby on Rails'] ], include_blank: '言語を選択してください' %>
       <% if @post.errors.include?(:language) %>
         <p class="post-form__msg"><%= @post.errors.full_messages_for(:language).first %></p>
       <% end %>
@@ -23,7 +23,7 @@
     </div>
 
     <div>
-      <%= f.submit button_value %>
+      <%= f.submit button_value, class: "btn" %>
     </div>
     
   <% end %>

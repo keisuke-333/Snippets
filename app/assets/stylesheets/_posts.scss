@@ -1,15 +1,41 @@
-.post-form {
-  &__msg {
-    color: red;
+@import "./variables";
+
+.posts {
+
+  &__title {
+    font-size: $font-size_title;
   }
 
-  .field_with_errors {
-    display: contents;
+  &__list {
+    margin-top: 20px;
+    margin-bottom: 20px;
+
+    &-item {
+      padding: 15px;
+      border-bottom: 1px solid #6665658f;
+    }
+  }
+
+  &__link {
+    text-align: right;
+  }
+}
+
+// postフォーム
+.post-form {
+  margin: 20px 0;
+
+  &__field {
+    margin-bottom: 15px;
 
     input,
+    select,
     textarea {
-      border: 2px solid red;
-      background: #f7dcd9;
+      width: 100%;
     }
+  }
+
+  .btn {
+    width: 100%;
   }
 }
