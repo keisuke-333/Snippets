@@ -53,6 +53,12 @@ class ImageUploader < CarrierWave::Uploader::Base
     "#{secure_token}.#{file.extension}" if original_filename.present?
   end
 
+  process convert: "jpg"
+
+  def filename
+    super.chomp(File.extname(super)) + ".jpg" if original_filename.present?
+  end
+
   protected
 
   def secure_token
