@@ -11,3 +11,5 @@
 - ruby 2.6.6
 - rails 6.0.3.2
 - devise 4.7.2
+- carrierwave 2.1
+- MiniMagick

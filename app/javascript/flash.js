@@ -1,5 +1,5 @@
 document.addEventListener('turbolinks:load', function () {
-  if (document.querySelector(".flash")) {
+  if (document.querySelector(".flash") != null) {
     let ms = 600;
     let elm = document.querySelector(".flash");
     elm.style.transition = "height " + ms + "ms";
