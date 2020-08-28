@@ -20,12 +20,31 @@
 
   &__menu {
     display: flex;
+    position: relative;
 
     &-item {
       margin-right: 20px;
       border-radius: 9px;
 
-      & a {
+      &--img {
+        margin-right: 30px;
+
+        .icon {
+          cursor: pointer;
+          display: block;
+          width: 57px;
+          height: 57px;
+          border-radius: 50%;
+          box-shadow: 0 0 6px gray;
+
+          &:hover {
+            box-shadow: 0 0 20px white;
+            transition: .2s;
+          }
+        }
+      }
+
+      .link {
         color: #232323;
         display: block;
         padding: 20px;
@@ -36,7 +55,7 @@
         transition: .3s;
       }
 
-      &.primary {
+      &.new {
         background-color: #f77261;
         border: 2px solid white;
 
@@ -46,4 +65,33 @@
       }
     }
   }
+}
+
+.dropdown-menu {
+  display: none;
+
+  &__item {
+
+    .link {
+      display: block;
+      padding: 20px;
+      color: #555;
+    }
+
+    &:hover {
+      background-color: #eee;
+    }
+  }
+}
+
+.is-open {
+  display: block;
+  position: absolute;
+  right: 0;
+  top: 70px;
+  width: 200px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 3px;
+  box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.15);
 }

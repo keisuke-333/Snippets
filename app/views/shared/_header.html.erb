@@ -4,20 +4,25 @@
     <ul class="header__menu">
       <% if user_signed_in? %>
         <li class="header__menu-item">
-          <%= link_to '投稿する', new_post_path %>
+          <%= link_to '投稿する', new_post_path, class: "link" %>
         </li>
-        <li class="header__menu-item">
-          <%= link_to 'アカウント編集', edit_user_registration_path %>
+        <li class="header__menu-item--img">
+          <%= image_tag current_user.image.url, id: "js-dropdown-img", class: "icon" %>
         </li>
-        <li class="header__menu-item">
-          <%= link_to 'ログアウト', destroy_user_session_path, method: :delete %>
-        </li>
+        <div id="js-show-list" class="dropdown-menu">
+          <li class="dropdown-menu__item">
+            <%= link_to 'アカウント編集', edit_user_registration_path, class: "link" %>
+          </li>
+          <li class="dropdown-menu__item">
+            <%= link_to 'ログアウト', destroy_user_session_path, method: :delete, class: "link" %>
+          </li>
+        </div>
     <% else %>
-        <li class="header__menu-item primary">
-          <%= link_to "新規登録", new_user_registration_path %>
+        <li class="header__menu-item new">
+          <%= link_to "新規登録", new_user_registration_path, class: "link" %>
         </li>
         <li class="header__menu-item">
-          <%= link_to "ログイン", new_user_session_path %>
+          <%= link_to "ログイン", new_user_session_path, class: "link" %>
         </li>
       <% end %>
     </ul>

@@ -30,7 +30,7 @@ class ImageUploader < CarrierWave::Uploader::Base
 
   # Create different versions of your uploaded files:
   version :thumb do
-    process resize_to_fit: [48, 48]
+    process resize_to_fit: [64, 64]
   end
 
   process resize_to_limit: [128, 128]
@@ -51,14 +51,14 @@ class ImageUploader < CarrierWave::Uploader::Base
     0..5.megabytes
   end
 
-  def filename
-    "#{secure_token}.#{file.extension}" if original_filename.present?
-  end
-
   process convert: "jpg"
 
   def filename
     super.chomp(File.extname(super)) + ".jpg" if original_filename.present?
+  end
+
+  def filename
+    "#{secure_token}.#{file.extension}" if original_filename.present?
   end
 
   protected
