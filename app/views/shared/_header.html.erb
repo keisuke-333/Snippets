@@ -6,8 +6,9 @@
         <li class="header__menu-item">
           <%= link_to '投稿する', new_post_path, class: "link" %>
         </li>
-        <li class="header__menu-item--img">
+        <li class="header__menu-item--img" id="js-menu-img">
           <%= image_tag current_user.image.url, id: "js-dropdown-img", class: "icon" %>
+          <span class="fas fa-fw fa-caret-down" id="js-caret-down"></span>
         </li>
         <div id="js-show-list" class="dropdown-menu">
           <li class="dropdown-menu__item">

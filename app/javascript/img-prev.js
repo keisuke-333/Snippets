@@ -7,8 +7,8 @@ document.addEventListener('turbolinks:load', () => {
 
       fileReader.onload = function () {
         let dataUri = this.result;
-        let img = document.getElementById('js_img_prev');
-        img.src = dataUri;
+        let $img = document.getElementById('js_img_prev');
+        $img.src = dataUri;
       };
 
       fileReader.readAsDataURL(file);
