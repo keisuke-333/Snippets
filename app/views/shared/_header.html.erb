@@ -4,7 +4,9 @@
     <ul class="header__menu">
       <% if user_signed_in? %>
         <li class="header__menu-item">
-          <%= link_to '投稿する', new_post_path, class: "link" %>
+          <%= link_to new_post_path, class: "link" do %>
+            <span class="fas fa-edit"></span>投稿する
+          <% end %>
         </li>
         <li class="header__menu-item--img" id="js-menu-img">
           <%= image_tag current_user.image.url, id: "js-dropdown-img", class: "icon" %>
