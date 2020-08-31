@@ -4,13 +4,11 @@
 
   <div class="posts__list">
     <% @posts.each do |post| %>
-      <div class="posts__list-item">
-        <%= post.title %>
-        <%= post.language %>
-        <%= post.code %>
-        <%= link_to '詳細', post %>
-        <%= link_to '編集', edit_post_path(post) %>
-        <%= link_to '削除', post, method: :delete, data: {confirm: '削除しますか？'} %>
+      <div class="posts__list--item">
+        <%= image_tag post.user.image.thumb.url, class: "icon" %>
+        <div class="body">
+          <%= link_to post.title, post, class: "title" %>
+        </div>
       </div>
     <% end %>
   </div>
