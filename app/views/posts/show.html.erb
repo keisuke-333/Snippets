@@ -10,7 +10,7 @@
     コード：<%= simple_format(h @post.code) %>
   </div>
 
-  <% if @post.user_id == current_user.id %>
+  <% if @user == current_user %>
     <%= link_to '編集', edit_post_path(@post) %>
     <%= link_to '削除', @post, method: :delete, data: {confirm: '削除しますか？'} %>
   <% end %>

@@ -21,9 +21,14 @@ class PostsController < ApplicationController
   end
 
   def show
+    @post = Post.find(params[:id])
+    @user = @post.user
   end
 
   def edit
+    if @post.user_id != current_user.id
+      redirect_to posts_url, alert: "エラーが発生しました。表示できません。"
+    end
   end
 
   def update
@@ -36,7 +41,7 @@ class PostsController < ApplicationController
 
   def destroy
     @post.destroy
-    redirect_to posts_url, alert: "削除しました。"
+    redirect_to posts_url, notice: "削除しました。"
   end
 
   private
