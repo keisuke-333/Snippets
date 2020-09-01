@@ -5,7 +5,7 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
 
   validates :name, presence: true
-  validates :profile, length: { maximum: 100 }
+  validates :profile, length: { maximum: 200 }
   mount_uploader :image, ImageUploader
 
   has_many :posts
