@@ -2,7 +2,5 @@
 @import "base";
 @import "header";
 @import "flash";
-@import "users/user-auth";
-@import "users/user-show";
-@import "posts/posts";
-@import "posts/post-form";
+@import "users/*";
+@import "posts/*";
