@@ -1,3 +1,24 @@
-<h1>Users#show</h1>
+<div class="user-show__top">
+  <div class="area__image">
+    <%= image_tag @user.image.url, class: "icon"%>
+  </div>
+  <div class="area__name"><%= @user.name %></div>
+  <div class="area__profile"><%= @user.profile %></div>
 
-<p><%= @user.name %></p>
+  <% if @user == current_user %>
+  <div class="area__button">
+    <%= link_to 'プロフィールを編集', edit_user_registration_path, class: "edit" %>
+  </div>
+  <% end %>
+</div>
+
+<div class="user-show__center">
+  <div class="area__posts">
+    <div class="headline"><i class="fas fa-list"></i>投稿一覧</div>
+    <% @user.posts.each do |post| %>
+      <div class="list">
+        <%= link_to post.title, post %>
+      </div>
+    <% end %>
+  </div>
+</div>
