@@ -5,7 +5,7 @@
   <div class="posts__list">
     <% @posts.each do |post| %>
       <div class="posts__list--item">
-        <%= image_tag post.user.image.url, class: "icon" %>
+        <%= link_to (image_tag post.user.image.url, class: "icon"), user_path(post.user_id) %>
         <div class="body">
           <%= link_to post.title, post, class: "title" %>
         </div>
