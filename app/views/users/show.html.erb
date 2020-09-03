@@ -14,7 +14,7 @@
 
 <div class="user-show__center">
   <div class="area__posts">
-    <div class="headline"><i class="fas fa-list"></i>投稿一覧</div>
+    <div class="headline"><%= icon('fas', 'list') %>投稿一覧</div>
     <% @user.posts.each do |post| %>
       <div class="list">
         <%= link_to post.title, post %>
