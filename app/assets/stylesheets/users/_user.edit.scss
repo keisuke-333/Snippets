@@ -1,0 +1,109 @@
+.user-edit {
+
+  .user-edit__main {
+    margin: 30px auto;
+    width: 450px;
+    padding: 30px;
+    background: white;
+
+    .form {
+      margin: 20px 0;
+
+      input,
+      textarea {
+        width: 100%;
+        padding: 10px;
+        font-size: 20px;
+        box-sizing: border-box;
+      }
+
+      .area-image {
+        text-align: center;
+        margin-bottom: 20px;
+
+        .icon {
+          width: 150px;
+          height: 150px;
+          border-radius: 50%;
+          box-shadow: 0 0 8px gray;
+        }
+      }
+
+      .image-field {
+        margin-bottom: 30px;
+
+        .btn {
+          display: block;
+          text-align: center;
+          border-radius: 3px;
+          width: 50%;
+          margin: 0 auto;
+          padding: 15px 0;
+          color: #fffffe;
+          background: #5f6c7b;
+
+          &:hover {
+            cursor: pointer;
+          }
+        }
+
+        input {
+          display: none;
+        }
+      }
+
+      .name-field {
+        margin: 0 20px 20px;
+      }
+
+      .profile-field {
+        margin: 0 20px 20px;
+      }
+
+      .submit-field {
+        margin: 0 20px 30px;
+
+        .btn {
+          display: block;
+          background-color: #094067;
+          color: #fffffe;
+          border-radius: 3px;
+          border: none;
+          cursor: pointer;
+        }
+      }
+    }
+
+    .area-delete {
+      margin: 50px 30px;
+
+      .headline {
+
+        .fa-trash-alt {
+          margin-right: 3px;
+        }
+
+        font-size: 24px;
+        margin-bottom: 30px;
+      }
+
+      .explanation {
+        font-size: 15px;
+        margin-bottom: 30px;
+      }
+
+      .delete-field {
+        text-align: center;
+
+        .btn {
+          display: block;
+          color: #fffffe;
+          background: #ef4565;
+          padding: 8px;
+          border-radius: 3px;
+          text-decoration: none;
+        }
+      }
+    }
+  }
+}

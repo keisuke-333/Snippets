@@ -1,68 +1,47 @@
-<div class="container-center">
-  <h2 class="user-auth__title">アカウントの編集</h2>
-  <div class="user-auth__form">
-    <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
-      <%= render "devise/shared/error_messages", resource: resource %>
+<div class="user-edit">
 
-      <div class="user-auth__form-img">
-        <%= image_tag @user.image.url, id: :js_img_prev , class: "icon" %>
-      </div>
+  <div class="user-edit__main">
+    <div class="form">
+      <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
+        <%= render "devise/shared/error_messages", resource: resource %>
 
-      <div class="user-auth__form-field">
-        <%= f.label :image, "プロフィール画像を変更", class: "image-btn" %>
-        <%= f.file_field :image, accept: "image/png,image/jpeg,image/gif", class: "image-form" %>
-      </div>
+        <div class="area-image">
+          <%= image_tag @user.image.url, id: :js_img_prev , class: "icon" %>
+        </div>
 
-      <div class="user-auth__form-field">
-        <%= f.label :name %><br />
-        <%= f.text_field :name, autofocus: true, autocomplete: "name", placeholder: "ユーザ名", required: true, maxlength: '10' %>
-      </div>
+        <div class="image-field">
+          <%= f.label :image, "プロフィール画像を変更", class: "btn" %>
+          <%= f.file_field :image, accept: "image/png,image/jpeg,image/gif" %>
+        </div>
 
-      <div class="user-auth__form-field">
-        <%= f.label :profile %><br />
-        <%= f.text_area :profile, autocomplete: "profile", size: '30x10', placeholder: "プロフィール", maxlength: '200' %>
-      </div>
+        <div class="name-field">
+          <%= f.label :name %>
+          <%= f.text_field :name, autofocus: true, autocomplete: "name", placeholder: "ユーザ名", required: true, maxlength: '10' %>
+        </div>
 
-      <div class="user-auth__form-field">
-        <%= f.label :email %><br />
-        <%= f.email_field :email, autofocus: true, autocomplete: "email", placeholder: "メールアドレス", required: true, maxlength: '100' %>
-      </div>
+        <div class="profile-field">
+          <%= f.label :profile %>
+          <%= f.text_area :profile, autocomplete: "profile", size: '30x10', placeholder: "プロフィール", maxlength: '200' %>
+        </div>
 
-      <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
-        <div><%= t('.currently_waiting_confirmation_for_email', email: resource.unconfirmed_email) %></div>
+        <div class="submit-field">
+          <%= f.submit "更新する", class: "btn" %>
+        </div>
       <% end %>
-
-      <div class="user-auth__form-field">
-        <%= f.label :password %> <i>(<%= t('.leave_blank_if_you_don_t_want_to_change_it') %>)</i><br />
-        <%= f.password_field :password, autocomplete: "new-password", placeholder: "新しいパスワード", maxlength: '30' %>
-        <% if @minimum_password_length %>
-          <br />
-          <em><%= t('devise.shared.minimum_password_length', count: @minimum_password_length) %></em>
-        <% end %>
-      </div>
-
-      <div class="user-auth__form-field">
-        <%= f.label :password_confirmation %><br />
-        <%= f.password_field :password_confirmation, autocomplete: "new-password", placeholder: "新しいパスワード(確認用)" %>
-      </div>
-
-      <div class="user-auth__form-field">
-        <%= f.label :current_password %> <i>(<%= t('.we_need_your_current_password_to_confirm_your_changes') %>)</i><br />
-        <%= f.password_field :current_password, autocomplete: "current-password", placeholder: "現在のパスワード" %>
-      </div>
-
-      <div class="actions">
-        <%= f.submit t('.update'), class: "btn" %>
-      </div>
-    <% end %>
-
-    <h3><%= t('.cancel_my_account') %></h3>
-
-    <div>
-      <%= link_to "トップページ", root_path %>
-      <%= link_to t('.cancel_my_account'), registration_path(resource_name), data: {confirm: t('.are_you_sure')}, method: :delete %>
     </div>
 
-    <%= link_to t('devise.shared.links.back'), :back %>
+    <hr>
+
+    <div class="area-delete">
+      <h2 class="headline"><i class="fas fa-trash-alt"></i>アカウント削除</h2>
+      <p class="explanation">
+        一度アカウントを削除すると、二度と元に戻せません。<br>
+        十分ご注意ください。
+      </p>
+      <div class="delete-field">
+        <%= link_to t('.cancel_my_account'), registration_path(resource_name), data: {confirm: t('.are_you_sure')}, method: :delete, class: "btn" %>
+      </div>
+    </div>
   </div>
+
 </div>
