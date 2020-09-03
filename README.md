@@ -13,3 +13,4 @@
 - devise 4.7.2
 - carrierwave 2.1
 - MiniMagick
+- font-awesome-sass
