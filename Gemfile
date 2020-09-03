@@ -25,6 +25,9 @@ gem 'carrierwave'
 # 画像ファイルの加工
 gem 'mini_magick'
 
+# Font Awesome
+gem 'font-awesome-sass'
+
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
 end

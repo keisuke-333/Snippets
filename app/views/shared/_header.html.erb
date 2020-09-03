@@ -5,12 +5,12 @@
       <% if user_signed_in? %>
         <li class="header__menu-item">
           <%= link_to new_post_path, class: "link" do %>
-            <span class="fas fa-edit"></span>投稿する
+            <%= icon('fas', 'edit') %>投稿する
           <% end %>
         </li>
         <li class="header__menu-item--img" id="js-menu-img">
           <%= image_tag current_user.image.url, id: "js-dropdown-img", class: "icon" %>
-          <span class="fas fa-fw fa-caret-down" id="js-caret-down"></span>
+          <%= icon('fas', 'caret-down', class: "fa-fw", id: "js-caret-down") %>
         </li>
         <div id="js-show-list" class="dropdown-menu">
           <li class="dropdown-menu__item">
