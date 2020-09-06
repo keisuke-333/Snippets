@@ -9,7 +9,7 @@ Rails.application.routes.draw do
     get "signup" => "users/registrations#new", as: :new_user_registration
     post "signup" => "users/registrations#create", as: :user_registration
     get "signup/cancel" => "users/registrations#cancel", as: :cancel_user_registration
-    get "settings/profile" => "users/registrations#edit", as: :edit_user_registration
+    get "user" => "users/registrations#edit", as: :edit_user_registration
     patch "user" => "users/registrations#update", as: nil
     put "user" => "users/registrations#update", as: :update_user_registration
     delete "user" => "users/registrations#destroy", as: :destroy_user_registration
