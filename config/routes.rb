@@ -10,6 +10,7 @@ Rails.application.routes.draw do
     post "signup" => "users/registrations#create", as: :user_registration
     get "signup/cancel" => "users/registrations#cancel", as: :cancel_user_registration
     get "user" => "users/registrations#edit", as: :edit_user_registration
+    get "settings/password" => "users/registrations#change_password", as: :change_password_user_registration
     patch "user" => "users/registrations#update", as: nil
     put "user" => "users/registrations#update", as: :update_user_registration
     delete "user" => "users/registrations#destroy", as: :destroy_user_registration
