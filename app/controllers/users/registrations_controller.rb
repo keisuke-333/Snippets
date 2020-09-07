@@ -38,6 +38,12 @@ class Users::RegistrationsController < Devise::RegistrationsController
   #   super
   # end
 
+  def deactivate
+    unless user_signed_in?
+      redirect_to new_user_session_url, alert: "ログインしてください。"
+    end
+  end
+
   protected
 
   def update_resource(resource, params)

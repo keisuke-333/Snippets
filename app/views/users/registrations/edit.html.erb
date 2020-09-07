@@ -39,7 +39,7 @@
         十分ご注意ください。
       </p>
       <div class="delete-field">
-        <%= link_to t('.cancel_my_account'), destroy_user_registration_path, data: {confirm: t('.are_you_sure')}, method: :delete, class: "btn" %>
+        <%= link_to "アカウント削除", deactivate_user_registration_path, class: "btn" %>
       </div>
     </div>
   </div>
