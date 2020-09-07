@@ -1,0 +1,41 @@
+.user-deactivate {
+  margin: 100px auto;
+  width: 690px;
+  padding: 15px;
+  background: white;
+
+  .title {
+    font-size: 45px;
+    padding: 30px;
+    margin-bottom: 50px;
+    border-bottom: 1px solid #5f6c7b;
+    text-align: center;
+  }
+
+  .explanation {
+    padding: 10px;
+    margin-bottom: 50px;
+  }
+
+  .delete-field {
+    width: 50%;
+    text-align: center;
+    margin: 0 auto;
+    margin-bottom: 50px;
+    font-size: 20px;
+
+    .btn {
+      display: block;
+      color: #fffffe;
+      background: #ef4565;
+      padding: 20px;
+      border-radius: 3px;
+      text-decoration: none;
+      margin-bottom: 50px;
+
+      .fa-user-slash {
+        margin-right: 5px;
+      }
+    }
+  }
+}
