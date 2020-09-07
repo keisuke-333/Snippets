@@ -38,6 +38,10 @@ class Users::RegistrationsController < Devise::RegistrationsController
   #   super
   # end
 
+  def change_password
+    @user = current_user
+  end
+
   def deactivate
     unless user_signed_in?
       redirect_to new_user_session_url, alert: "ログインしてください。"
@@ -47,7 +51,11 @@ class Users::RegistrationsController < Devise::RegistrationsController
   protected
 
   def update_resource(resource, params)
-    resource.update_without_password(params)
+    resource.update_without_current_password(params)
+  end
+
+  def after_update_path_for(resource)
+    user_path(@user.id)
   end
 
   # If you have extra params to permit, append them to the sanitizer.
