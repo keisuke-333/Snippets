@@ -1,0 +1,9 @@
+<h2>アカウント削除</h2>
+
+<div class="delete-field">
+  <%= link_to "アカウント削除", destroy_user_registration_path, data: {confirm: "アカウントを削除すると投稿内容が全て削除されます。\n本当によろしいですか？"}, method: :delete, class: "btn" %>
+</div>
+
+<ul>
+  <li><%= link_to "登録情報変更", edit_user_registration_path %></li>
+</ul>

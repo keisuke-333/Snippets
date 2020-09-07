@@ -13,6 +13,7 @@ Rails.application.routes.draw do
     patch "user" => "users/registrations#update", as: nil
     put "user" => "users/registrations#update", as: :update_user_registration
     delete "user" => "users/registrations#destroy", as: :destroy_user_registration
+    get "deactivate" => "users/registrations#deactivate", as: :deactivate_user_registration
     get "password" => "users/passwords#new", as: :new_user_password
     post "password" => "users/passwords#create", as: :user_password
     get "password/edit" => "users/passwords#edit", as: :edit_user_password
