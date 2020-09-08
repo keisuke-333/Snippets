@@ -61,7 +61,7 @@
       }
 
       .submit-field {
-        margin: 0 20px 30px;
+        margin: 0 20px 20px;
 
         .btn {
           display: block;
@@ -72,6 +72,11 @@
           cursor: pointer;
         }
       }
+    }
+
+    .area-password {
+      text-align: right;
+      margin: 0 30px 15px 0;
     }
 
     .area-delete {
