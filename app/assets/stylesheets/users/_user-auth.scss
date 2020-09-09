@@ -1,60 +1,47 @@
-@import "./variables";
-
 .user-auth {
+  margin: 60px auto;
+  width: 450px;
+  padding: 30px;
+  background: white;
 
-  &__title {
-    font-size: $font-size_title;
+  .title {
+    text-align: center;
+    font-size: 36px;
+    line-height: 36px;
+    padding: 10px;
+    margin-bottom: 45px;
   }
 
-  &__form {
-    margin: 20px 0;
+  .form {
+    margin: 0 45px;
 
-    &-img {
-      text-align: center;
-
-      .icon {
-        width: 128px;
-        height: 128px;
-        border-radius: 50%;
-        box-shadow: 0 0 8px gray;
-      }
+    .field {
+      margin-bottom: 20px;
     }
 
-    &-field {
-      margin-bottom: 15px;
-
-      label {
-        display: none;
-      }
-
-      input,
-      textarea {
-        box-sizing: border-box;
-        width: 100%;
-      }
-
-      .image-btn {
-        display: block;
-        background-color: #258a9c;
-        color: white;
-        text-align: center;
-        padding: 10px;
-        border-radius: 3px;
-        width: 50%;
-        margin: 0 auto;
-
-        &:hover {
-          cursor: pointer;
-        }
-      }
-
-      .image-form {
-        display: none;
-      }
-    }
-
-    .btn {
+    input {
+      padding: 15px;
+      font-size: 18px;
       width: 100%;
+      box-sizing: border-box;
     }
+
+    .submit-field {
+      margin-bottom: 30px;
+
+      .btn {
+        display: block;
+        background-color: #094067;
+        color: #fffffe;
+        border-radius: 3px;
+        border: none;
+        cursor: pointer;
+      }
+    }
+  }
+
+  .link-description {
+    margin-bottom: 5px;
+    text-align: center;
   }
 }
