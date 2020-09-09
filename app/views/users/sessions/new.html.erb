@@ -1,25 +1,16 @@
-<div class="container-center">
-  <h2 class="user-auth__title"><%= t('.sign_in') %></h2>
-  <div class="user-auth__form">
+<div class="user-login">
+  <h2 class="title">Snippets に ログイン</h2>
+  <div class="form">
     <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-      <div class="user-auth__form-field">
-        <%= f.label :email %><br />
+      <div class="field">
         <%= f.email_field :email, autofocus: true, autocomplete: "email", placeholder: "メールアドレス", required: true, maxlength: '100' %>
       </div>
 
-      <div class="user-auth__form-field">
-        <%= f.label :password %><br />
+      <div class="field">
         <%= f.password_field :password, autocomplete: "current-password", placeholder: "パスワード", required: true, minlength: @minimum_password_length, maxlength: '30' %>
       </div>
 
-      <% if devise_mapping.rememberable? %>
-        <div class="user-auth__form-field">
-          <%= f.check_box :remember_me %>
-          <%= f.label :remember_me %>
-        </div>
-      <% end %>
-
-      <div class="actions">
+      <div class="submit-field">
         <%= f.submit t('.sign_in'), class: "btn" %>
       </div>
     <% end %>
