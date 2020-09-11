@@ -9,6 +9,7 @@ class User < ApplicationRecord
   mount_uploader :image, ImageUploader
 
   has_many :posts, :dependent => :destroy
+  has_many :favorites, :dependent => :destroy
 
   def update_without_current_password(params, *options)
     params.delete(:current_password)
