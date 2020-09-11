@@ -1,0 +1,11 @@
+<% if @post.favorited_by?(current_user) %>
+  <%= link_to post_favorites_path(@post.id), method: :delete, remote: true, id: :"fav-button-#{post.id}" do %>
+    <%= icon('fas', 'thumbs-up') %>
+  <% end %>
+  <span><%= @post.favorites.count %></span>
+<% else %>
+  <%= link_to post_favorites_path(@post.id), method: :post, remote: true, id: :"fav-button-#{post.id}" do %>
+    <%= icon('far', 'thumbs-up') %>
+  <% end %>
+  <span><%= @post.favorites.count %></span>
+<% end %>

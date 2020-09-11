@@ -10,18 +10,8 @@
     コード：<%= simple_format(h @post.code) %>
   </div>
 
-  <div>
-    <% if @post.favorited_by?(current_user) %>
-      <%= link_to post_favorites_path(@post.id), method: :delete do %>
-        <%= icon('fas', 'thumbs-up') %>
-      <% end %>
-      <%= @post.favorites.count %>
-    <% else %>
-      <%= link_to post_favorites_path(@post.id), method: :post do %>
-        <%= icon('far', 'thumbs-up') %>
-      <% end %>
-      <%= @post.favorites.count %>
-    <% end %>
+  <div id="js-fav-btn-<%= @post.id %>">
+    <%= render partial: 'favorites/favorite', locals: { post: @post} %>
   </div>
 
   <% if @user == current_user %>
