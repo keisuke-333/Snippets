@@ -21,4 +21,12 @@
       </div>
     <% end %>
   </div>
+  <div class="area__favorites">
+    <div class="headline"><%= icon('fas', 'thumbs-up') %>いいね済</div>
+    <% @favorite_posts.each do |post| %>
+      <div class="list">
+        <%= link_to post.title, post %>
+      </div>
+    <% end %>
+  </div>
 </div>
