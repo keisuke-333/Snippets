@@ -49,11 +49,30 @@
     padding: 30px;
 
     .area__posts {
+      margin-bottom: 50px;
+
       .headline {
         font-size: 27px;
         margin-bottom: 15px;
 
         .fa-list {
+          color: #ef4565;
+          margin-right: 6px;
+        }
+      }
+
+      .list {
+        font-size: 20px;
+        margin-bottom: 10px;
+      }
+    }
+
+    .area__favorites {
+      .headline {
+        font-size: 27px;
+        margin-bottom: 15px;
+
+        .fa-thumbs-up {
           color: #ef4565;
           margin-right: 6px;
         }
