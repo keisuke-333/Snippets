@@ -33,7 +33,7 @@ class PostsController < ApplicationController
 
   def update
     if @post.update(post_params)
-      redirect_to posts_url, notice: "更新しました。"
+      redirect_to post_url(params[:id]), notice: "更新しました。"
     else
       render :edit
     end
