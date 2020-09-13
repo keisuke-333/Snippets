@@ -34,22 +34,3 @@
     text-align: right;
   }
 }
-
-// postフォーム
-.post-form {
-  margin: 20px 0;
-
-  &__field {
-    margin-bottom: 15px;
-
-    input,
-    select,
-    textarea {
-      width: 100%;
-    }
-  }
-
-  .btn {
-    width: 100%;
-  }
-}
