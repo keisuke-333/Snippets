@@ -1,0 +1,45 @@
+.post-show {
+  margin: 0 auto;
+  margin-top: 30px;
+  width: 1000px;
+
+  .main {
+    background: white;
+    padding: 30px;
+    margin-bottom: 30px;
+
+    .top {
+      display: flex;
+      align-items: center;
+      margin-bottom: 30px;
+      line-height: 40px;
+      font-size: 40px;
+
+      .area-title {
+        width: 70%;
+      }
+
+      .area-language {
+        width: 30%;
+      }
+    }
+
+    .area-code {
+      font-size: 18px;
+
+      pre {
+        background: #d8eefe;
+        padding: 18px;
+      }
+
+      code {
+        background: rgb(209, 206, 206);
+      }
+    }
+  }
+
+  .right {
+    float: right;
+  }
+
+}

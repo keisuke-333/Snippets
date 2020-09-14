@@ -28,6 +28,12 @@ gem 'mini_magick'
 # Font Awesome
 gem 'font-awesome-sass'
 
+# Markdown
+gem 'redcarpet'
+
+# シンタックスハイライト
+gem 'coderay'
+
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
 end
