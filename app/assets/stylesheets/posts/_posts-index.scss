@@ -1,0 +1,45 @@
+.posts-index {
+  margin: 0 auto;
+  width: 450px;
+  padding: 30px;
+
+  .list {
+    margin-top: 20px;
+    margin-bottom: 20px;
+
+    .item {
+      padding: 15px;
+      border-top: 1px solid #6665658f;
+      display: flex;
+      align-items: center;
+
+      .area-image {
+        margin-right: 9px;
+
+        .icon {
+          width: 50px;
+          height: 50px;
+          border-radius: 50%;
+          box-shadow: 0 0 3px gray;
+        }
+      }
+
+      .area-body {
+        .title {
+          .link {
+            color: #232323;
+          }
+        }
+
+        .details {
+          color: #5f6c7b;
+          font-size: 0.8em;
+
+          .view {
+            margin-right: 0.2em;
+          }
+        }
+      }
+    }
+  }
+}

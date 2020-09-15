@@ -10,7 +10,11 @@
 - エディター：Visual Studio Code
 - ruby 2.6.6
 - rails 6.0.3.2
+
+#### gem
 - devise 4.7.2
 - carrierwave 2.1
 - MiniMagick
 - font-awesome-sass
+- redcarpet
+- coderay
