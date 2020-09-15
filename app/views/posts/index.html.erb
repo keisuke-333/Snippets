@@ -1,13 +1,19 @@
-<div class="container-center">
+<div class="posts-index">
 
-  <h1 class="posts__title">一覧画面</h1>
-
-  <div class="posts__list">
+  <div class="list">
     <% @posts.each do |post| %>
-      <div class="posts__list--item">
-        <%= link_to (image_tag post.user.image.url, class: "icon"), user_path(post.user_id) %>
-        <div class="body">
-          <%= link_to post.title, post, class: "title" %>
+      <div class="item">
+        <div class="area-image">
+          <%= link_to (image_tag post.user.image.url, class: "icon"), user_path(post.user_id) %>
+        </div>
+        <div class="area-body">
+          <div class="title">
+            <%= link_to post.title, post, class: "link" %>
+          </div>
+          <div class="details">
+            <span class="view"><%= icon('far', 'eye') %>0</span>
+            <span class="favorite"><%= icon('far', 'thumbs-up') %><%= post.favorites.count %></span>
+          </div>
         </div>
       </div>
     <% end %>
