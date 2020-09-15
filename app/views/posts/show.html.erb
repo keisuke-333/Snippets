@@ -1,26 +1,30 @@
-<div class="container-center">
+<div class="post-show">
 
-  <h1><%= @post.title %></h1>
+  <div class="main">
+    <div class="top">
+      <div class="area-language">
+        <%= @post.language %>
+      </div>
 
-  <div>
-    言語：<%= @post.language %>
+      <div class="area-title">
+        <h1><%= @post.title %></h1>
+      </div>
+    </div>
+
+    <div class="area-code">
+      <%= markdown(@post.code).html_safe %>
+    </div>
   </div>
 
-  <div>
-    コード：<%= simple_format(h @post.code) %>
-  </div>
+  <div class="right">
+    <div id="js-fav-btn-<%= @post.id %>">
+      <%= render partial: 'favorites/favorite', locals: { post: @post } %>
+    </div>
 
-  <div id="js-fav-btn-<%= @post.id %>">
-    <%= render partial: 'favorites/favorite', locals: { post: @post} %>
-  </div>
-
-  <% if @user == current_user %>
-    <%= link_to '編集', edit_post_path(@post) %>
-    <%= link_to '削除', @post, method: :delete, data: {confirm: '削除しますか？'} %>
-  <% end %>
-
-  <div class="posts__link">
-    <%= link_to '一覧画面へ', posts_path %>
+    <% if @user == current_user %>
+      <%= link_to '編集', edit_post_path(@post) %>
+      <%= link_to '削除', @post, method: :delete, data: { confirm: '削除しますか？' } %>
+    <% end %>
   </div>
 
 </div>

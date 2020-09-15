@@ -1,30 +1,36 @@
 <div class="post-form">
-  <%= form_with model: @post, local: true do |f| %>
 
-    <div class="post-form__field">
-      <%= f.text_field :title, placeholder: "タイトル", required: true, maxlength: 50 %>
-      <% if @post.errors.include?(:title) %>
-        <p class="post-form__msg"><%= @post.errors.full_messages_for(:title).first %></p>
-      <% end %>
-    </div>
+  <div class="form">
+    <%= form_with model: @post, local: true do |f| %>
 
-    <div class="post-form__field">
-      <%= f.select :language, [ ['HTML', 'HTML'], ['CSS', 'CSS'], ['JavaScript', 'JavaScript'], ['Ruby', 'Ruby'], ['Ruby on Rails', 'Ruby on Rails'] ], include_blank: '言語を選択してください' %>
-      <% if @post.errors.include?(:language) %>
-        <p class="post-form__msg"><%= @post.errors.full_messages_for(:language).first %></p>
-      <% end %>
-    </div>
+      <div class="top">
+        <div class="title-field">
+          <%= f.text_field :title, placeholder: "タイトル", required: true, maxlength: 50 %>
+          <% if @post.errors.include?(:title) %>
+            <p><%= @post.errors.full_messages_for(:title).first %></p>
+          <% end %>
+        </div>
 
-    <div class="post-form__field">
-      <%= f.text_area :code, size: '30x3', placeholder: "コード", required: true %>
-      <% if @post.errors.include?(:code) %>
-        <p class="post-form__msg"><%= @post.errors.full_messages_for(:code).first %></p>
-      <% end %>
-    </div>
+        <div class="select-field">
+          <%= f.select :language, [ ['HTML', 'HTML'], ['CSS', 'CSS'], ['JavaScript', 'JavaScript'], ['Ruby', 'Ruby'], ['Ruby on Rails', 'Ruby on Rails'] ], { include_blank: '言語を選択してください' }, required: true%>
+          <% if @post.errors.include?(:language) %>
+            <p><%= @post.errors.full_messages_for(:language).first %></p>
+          <% end %>
+        </div>
+      </div>
 
-    <div>
-      <%= f.submit button_value, class: "btn" %>
-    </div>
-    
-  <% end %>
+      <div class="code-field">
+        <%= f.text_area :code, placeholder: "コード", required: true %>
+        <% if @post.errors.include?(:code) %>
+          <p><%= @post.errors.full_messages_for(:code).first %></p>
+        <% end %>
+      </div>
+
+      <div class="submit-field">
+        <%= f.submit button_value, class: "btn" %>
+      </div>
+      
+    <% end %>
+  </div>
+
 </div>
