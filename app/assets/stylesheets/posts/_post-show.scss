@@ -11,13 +11,22 @@
     .top {
       margin-bottom: 30px;
 
-      .area-language {
-        display: inline-block;
-        background: #094067;
-        color: #fffffe;
-        padding: 0 0.5em;
-        border-radius: 0.2em;
-        margin-bottom: 0.6em;
+      &__area {
+        display: flex;
+        justify-content: space-between;
+
+        .area-language {
+          display: inline-block;
+          background: #094067;
+          color: #fffffe;
+          padding: 0 0.5em;
+          border-radius: 0.2em;
+          margin-bottom: 0.6em;
+        }
+
+        .area-pv {
+          color: #5f6c7b;
+        }
       }
 
       .area-title {

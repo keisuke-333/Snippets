@@ -2,8 +2,13 @@
 
   <div class="main">
     <div class="top">
-      <div class="area-language">
-        <%= @post.language %>
+      <div class="top__area">
+        <div class="area-language">
+          <%= @post.language %>
+        </div>
+        <div class="area-pv">
+          <%= @post.impressionist_count %> views
+        </div>
       </div>
 
       <div class="area-title">
