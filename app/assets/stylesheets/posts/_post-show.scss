@@ -14,6 +14,7 @@
       &__area {
         display: flex;
         justify-content: space-between;
+        margin-bottom: 1.5em;
 
         .area-language {
           display: inline-block;
@@ -21,7 +22,6 @@
           color: #fffffe;
           padding: 0 0.5em;
           border-radius: 0.2em;
-          margin-bottom: 0.6em;
         }
 
         .area-pv {
