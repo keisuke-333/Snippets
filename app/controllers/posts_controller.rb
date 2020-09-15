@@ -23,6 +23,7 @@ class PostsController < ApplicationController
   def show
     @post = Post.find(params[:id])
     @user = @post.user
+    impressionist(@post, nil, unique: [:session_hash])
   end
 
   def edit

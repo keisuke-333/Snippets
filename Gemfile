@@ -34,6 +34,9 @@ gem 'redcarpet'
 # シンタックスハイライト
 gem 'coderay'
 
+# PV数を計算
+gem 'impressionist'
+
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
 end
