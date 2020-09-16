@@ -8,7 +8,7 @@
         </div>
         <div class="area-body">
           <div class="title">
-            <%= link_to post.title, post, class: "link" %>
+            <%= link_to post.title.truncate(44), post, class: "link" %>
           </div>
           <div class="details">
             <span class="view"><%= icon('far', 'eye') %><%= post.impressionist_count %></span>
