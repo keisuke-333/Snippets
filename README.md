@@ -18,3 +18,4 @@
 - font-awesome-sass
 - redcarpet
 - coderay
+- impressionist

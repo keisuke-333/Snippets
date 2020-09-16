@@ -3,11 +3,18 @@
   <div class="main">
     <div class="top">
       <div class="top__area">
-        <div class="area-language">
-          <%= @post.language %>
+        <div class="left">
+          <div class="area-language">
+            <%= @post.language %>
+          </div>
+          <div class="area-datetime">
+            <%= l @post.updated_at, format: :date %>に更新
+          </div>
         </div>
-        <div class="area-pv">
-          <%= @post.impressionist_count %> views
+        <div class="right">
+          <div class="area-pv">
+            <%= @post.impressionist_count %> views
+          </div>
         </div>
       </div>
 
