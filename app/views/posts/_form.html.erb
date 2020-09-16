@@ -20,7 +20,7 @@
       </div>
 
       <div class="code-field">
-        <%= f.text_area :code, placeholder: "コード", required: true %>
+        <%= f.text_area :code, placeholder: "Markdown記法で書くことができます", required: true %>
         <% if @post.errors.include?(:code) %>
           <p><%= @post.errors.full_messages_for(:code).first %></p>
         <% end %>
