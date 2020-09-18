@@ -26,9 +26,5 @@ Rails.application.routes.draw do
 
   resources :posts do
     resource :favorites, only: [:create, :destroy]
-    collection do
-      get :order_pv
-      get :order_favorite
-    end
   end
 end
