@@ -32,12 +32,12 @@
           <% end %>
         </div>
         <div class="link">
-          <%= link_to order_pv_posts_path do %>
+          <%= link_to posts_path(sort: "pv") do %>
             <%= icon('far', 'eye', class: 'fa-fw') %>
           <% end %>
         </div>
         <div class="link">
-          <%= link_to order_favorite_posts_path do %>
+          <%= link_to posts_path(sort: "favorite") do %>
             <%= icon('far', 'thumbs-up', class: 'fa-fw') %>
           <% end %>
         </div>

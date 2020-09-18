@@ -3,15 +3,13 @@ class PostsController < ApplicationController
   before_action :set_post, only: [:show, :edit, :update, :destroy]
 
   def index
-    @posts = Post.order(created_at: :desc)
-  end
-
-  def order_pv
-    @posts = Post.order(impressions_count: :desc)
-  end
-
-  def order_favorite
-    @posts = Post.all.sort { |a, b| b.favorited_users.count <=> a.favorited_users.count }
+    if params[:sort] == nil
+      @posts = Post.order(created_at: :desc)
+    elsif params[:sort] == "pv"
+      @posts = Post.order(impressions_count: :desc)
+    elsif params[:sort] == "favorite"
+      @posts = Post.all.sort { |a, b| b.favorited_users.count <=> a.favorited_users.count }
+    end
   end
 
   def new
