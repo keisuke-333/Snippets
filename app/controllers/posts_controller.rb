@@ -3,7 +3,15 @@ class PostsController < ApplicationController
   before_action :set_post, only: [:show, :edit, :update, :destroy]
 
   def index
-    @posts = Post.all.order(created_at: :desc)
+    @posts = Post.order(created_at: :desc)
+  end
+
+  def order_pv
+    @posts = Post.order(impressions_count: :desc)
+  end
+
+  def order_favorite
+    @posts = Post.all.sort { |a, b| b.favorited_users.count <=> a.favorited_users.count }
   end
 
   def new
@@ -21,7 +29,6 @@ class PostsController < ApplicationController
   end
 
   def show
-    @post = Post.find(params[:id])
     @user = @post.user
     impressionist(@post, nil, unique: [:session_hash])
   end
