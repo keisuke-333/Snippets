@@ -1,5 +1,29 @@
 <div class="posts-index">
   <div class="container">
+    <div class="container__left">
+      <div class="select-language">
+        <div class="link">
+          <%= link_to posts_path(@q, :'q[language_eq' => "HTML") do %>
+            <%= icon('fab', 'html5', class: 'fa-fw') %>
+          <% end %>
+        </div>
+        <div class="link">
+          <%= link_to posts_path(@q, :'q[language_eq' => "CSS") do %>
+            <%= icon('fab', 'css3-alt', class: 'fa-fw') %>
+          <% end %>
+        </div>
+        <div class="link">
+          <%= link_to posts_path(@q, :'q[language_eq' => "JavaScript") do %>
+            <%= icon('fab', 'js', class: 'fa-fw') %>
+          <% end %>
+        </div>
+        <div class="link">
+          <%= link_to posts_path(@q, :'q[language_eq' => "Ruby") do %>
+            <%= icon('fas', 'gem', class: 'fa-fw') %>
+          <% end %>
+        </div>
+      </div>
+    </div>
     <div class="container__center">
       <%= search_form_for(@q, url:posts_path) do |f| %>
         <div class="input-field">
