@@ -6,6 +6,39 @@
     display: flex;
     margin: 3em;
 
+    &__left {
+      margin-right: 0.5em;
+
+      .select-language {
+        margin-top: 1.5em;
+
+        .link {
+          font-size: 2em;
+          margin-bottom: 0.6em;
+
+          &:hover {
+            opacity: 0.5;
+          }
+
+          .html {
+            color: rgb(250, 96, 96);
+          }
+
+          .css {
+            color: #1094f8;
+          }
+
+          .js {
+            color: rgb(236, 196, 15);
+          }
+
+          .ruby {
+            color: rgb(212, 81, 125);
+          }
+        }
+      }
+    }
+
     &__center {
       width: 600px;
       margin-right: 2em;

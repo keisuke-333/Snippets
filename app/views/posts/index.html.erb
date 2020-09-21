@@ -3,22 +3,22 @@
     <div class="container__left">
       <div class="select-language">
         <div class="link">
-          <%= link_to posts_path(@q, :'q[language_eq' => "HTML") do %>
+          <%= link_to posts_path(@q, :'q[language_eq' => "HTML"), class: "html" do %>
             <%= icon('fab', 'html5', class: 'fa-fw') %>
           <% end %>
         </div>
         <div class="link">
-          <%= link_to posts_path(@q, :'q[language_eq' => "CSS") do %>
+          <%= link_to posts_path(@q, :'q[language_eq' => "CSS"), class: "css" do %>
             <%= icon('fab', 'css3-alt', class: 'fa-fw') %>
           <% end %>
         </div>
         <div class="link">
-          <%= link_to posts_path(@q, :'q[language_eq' => "JavaScript") do %>
+          <%= link_to posts_path(@q, :'q[language_eq' => "JavaScript"), class: "js" do %>
             <%= icon('fab', 'js', class: 'fa-fw') %>
           <% end %>
         </div>
         <div class="link">
-          <%= link_to posts_path(@q, :'q[language_eq' => "Ruby") do %>
+          <%= link_to posts_path(@q, :'q[language_eq' => "Ruby"), class: "ruby" do %>
             <%= icon('fas', 'gem', class: 'fa-fw') %>
           <% end %>
         </div>
