@@ -3,13 +3,8 @@ class PostsController < ApplicationController
   before_action :set_post, only: [:show, :edit, :update, :destroy]
 
   def index
-    if params[:sort] == nil
-      @posts = Post.order(created_at: :desc)
-    elsif params[:sort] == "pv"
-      @posts = Post.order(impressions_count: :desc)
-    elsif params[:sort] == "favorite"
-      @posts = Post.all.sort { |a, b| b.favorited_users.count <=> a.favorited_users.count }
-    end
+    @q = Post.ransack(params[:q])
+    @posts = @q.result.order(created_at: :desc)
   end
 
   def new
@@ -58,5 +53,9 @@ class PostsController < ApplicationController
 
   def post_params
     params.require(:post).permit(:title, :language, :code)
+  end
+
+  def search_params
+    params.require(:q).permit(:title_or_code_cont)
   end
 end

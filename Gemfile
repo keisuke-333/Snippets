@@ -37,6 +37,9 @@ gem 'coderay'
 # PV数を計算
 gem 'impressionist'
 
+# 検索機能
+gem 'ransack'
+
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
 end

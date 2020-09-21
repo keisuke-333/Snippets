@@ -1,15 +1,75 @@
 .posts-index {
   margin: 0 auto;
-  width: 800px;
+  width: 750px;
 
   .container {
     display: flex;
     margin: 3em;
 
+    &__left {
+      margin-right: 1em;
+
+      .select-language {
+        margin-top: 1.5em;
+
+        .link {
+          font-size: 2em;
+          margin-bottom: 0.6em;
+
+          &:hover {
+            opacity: 0.5;
+          }
+
+          .html {
+            color: rgb(250, 96, 96);
+          }
+
+          .css {
+            color: #1094f8;
+          }
+
+          .js {
+            color: rgb(236, 196, 15);
+          }
+
+          .ruby {
+            color: rgb(212, 81, 125);
+          }
+        }
+      }
+    }
+
     &__center {
       width: 600px;
-      padding: 1em;
       margin-right: 2em;
+
+      .post_search {
+        margin-bottom: 0.5em;
+
+        .input-field {
+          padding: 1em;
+          text-align: center;
+
+          input {
+            width: 100%;
+            padding: 0.6em 0.8em;
+            font-size: 1.2em;
+            border-radius: 1.5em;
+            border: 1px solid #d8eefe;
+            background: #d8eefe;
+
+            &:focus {
+              outline: none;
+              border: 1px solid #3da9fc;
+            }
+
+            &::placeholder {
+              color: #8e9cb3;
+            }
+
+          }
+        }
+      }
 
       .list {
 
@@ -20,25 +80,32 @@
           align-items: center;
 
           .area-image {
-            margin-right: 9px;
+            margin-right: 1em;
 
             .icon {
               width: 50px;
               height: 50px;
               border-radius: 50%;
               box-shadow: 0 0 3px gray;
+
+              &:hover {
+                opacity: 0.8;
+                transition: .1s;
+              }
             }
           }
 
           .area-body {
             .title {
+              font-size: 1.1em;
+
               .link {
                 color: #232323;
               }
             }
 
             .details {
-              color: #5f6c7b;
+              color: #8c9aaa;
               font-size: 0.8em;
 
               .date-time {
@@ -56,15 +123,17 @@
 
     &__right {
       .switch {
+        margin-top: 1.5em;
+
         .link {
-          font-size: 1.5em;
-          margin-bottom: 0.6em;
+          font-size: 1.2em;
+          margin-bottom: 0.4em;
 
           a {
             color: #5f6c7b;
 
             &:hover {
-              color: #3da9fc;
+              opacity: 0.5;
               transition: .1s;
             }
           }

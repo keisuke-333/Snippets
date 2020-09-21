@@ -1,8 +1,36 @@
 <div class="posts-index">
-
   <div class="container">
-
+    <div class="container__left">
+      <div class="select-language">
+        <div class="link">
+          <%= link_to posts_path(@q, :'q[language_eq' => "HTML"), class: "html" do %>
+            <%= icon('fab', 'html5', class: 'fa-fw') %>
+          <% end %>
+        </div>
+        <div class="link">
+          <%= link_to posts_path(@q, :'q[language_eq' => "CSS"), class: "css" do %>
+            <%= icon('fab', 'css3-alt', class: 'fa-fw') %>
+          <% end %>
+        </div>
+        <div class="link">
+          <%= link_to posts_path(@q, :'q[language_eq' => "JavaScript"), class: "js" do %>
+            <%= icon('fab', 'js', class: 'fa-fw') %>
+          <% end %>
+        </div>
+        <div class="link">
+          <%= link_to posts_path(@q, :'q[language_eq' => "Ruby"), class: "ruby" do %>
+            <%= icon('fas', 'gem', class: 'fa-fw') %>
+          <% end %>
+        </div>
+      </div>
+    </div>
     <div class="container__center">
+      <%= search_form_for(@q, url:posts_path) do |f| %>
+        <div class="input-field">
+          <%= f.search_field :title_or_code_cont, placeholder: "\uf002 キーワード検索", class: "fas" %>
+        </div>
+      <% end %>
+
       <div class="list">
         <% @posts.each do |post| %>
           <div class="item">
@@ -27,23 +55,21 @@
     <div class="container__right">
       <div class="switch">
         <div class="link">
-          <%= link_to posts_path do %>
+          <%= sort_link(@q, :created_at, hide_indicator: true, default_order: :desc) do %>
             <%= icon('fas', 'history', class: 'fa-fw') %>
           <% end %>
         </div>
         <div class="link">
-          <%= link_to posts_path(sort: "pv") do %>
+          <%= sort_link(@q, :impressions_count, hide_indicator: true, default_order: :desc) do %>
             <%= icon('far', 'eye', class: 'fa-fw') %>
           <% end %>
         </div>
         <div class="link">
-          <%= link_to posts_path(sort: "favorite") do %>
+          <%= sort_link(@q, :favorites_count, hide_indicator: true, default_order: :desc) do %>
             <%= icon('far', 'thumbs-up', class: 'fa-fw') %>
           <% end %>
         </div>
       </div>
     </div>
-
   </div>
-
 </div>
