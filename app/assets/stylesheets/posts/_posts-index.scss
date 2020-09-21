@@ -1,6 +1,6 @@
 .posts-index {
   margin: 0 auto;
-  width: 800px;
+  width: 700px;
 
   .container {
     display: flex;
@@ -8,8 +8,35 @@
 
     &__center {
       width: 600px;
-      padding: 1em;
       margin-right: 2em;
+
+      .post_search {
+        margin-bottom: 0.5em;
+
+        .input-field {
+          padding: 1em;
+          text-align: center;
+
+          input {
+            width: 100%;
+            padding: 0.6em 0.8em;
+            font-size: 1.2em;
+            border-radius: 1.5em;
+            border: 1px solid #d8eefe;
+            background: #d8eefe;
+
+            &:focus {
+              outline: none;
+              border: 1px solid #3da9fc;
+            }
+
+            &::placeholder {
+              color: #8e9cb3;
+            }
+
+          }
+        }
+      }
 
       .list {
 
@@ -56,6 +83,8 @@
 
     &__right {
       .switch {
+        margin-top: 1.5em;
+
         .link {
           font-size: 1.5em;
           margin-bottom: 0.6em;
