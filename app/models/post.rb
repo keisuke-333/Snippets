@@ -12,4 +12,9 @@ class Post < ApplicationRecord
   def favorited_by?(user)
     favorites.where(user_id: user.id).exists?
   end
+
+  ransacker :favorites_count do
+    query = "(SELECT COUNT(*) FROM favorites where favorites.post_id = posts.id)"
+    Arel.sql(query)
+  end
 end
