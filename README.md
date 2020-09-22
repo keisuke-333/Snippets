@@ -13,7 +13,7 @@
 
 #### gem
 - devise 4.7.2
-- carrierwave 2.1
+- carrierwave
 - MiniMagick
 - font-awesome-sass
 - redcarpet
