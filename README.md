@@ -19,3 +19,4 @@
 - redcarpet
 - coderay
 - impressionist
+- ransack

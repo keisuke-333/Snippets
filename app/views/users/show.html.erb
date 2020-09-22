@@ -13,20 +13,51 @@
 </div>
 
 <div class="user-show__center">
-  <div class="area__posts">
-    <div class="headline"><%= icon('fas', 'list') %>投稿一覧</div>
-    <% @posts.each do |post| %>
-      <div class="list">
-        <%= link_to post.title, post %>
-      </div>
-    <% end %>
+  <input type="radio" name="hide" id="tab1" checked>
+  <label class="tab" for="tab1"><%= icon('fas', 'list') %>投稿一覧</label>
+  <div class="content">
+    <div class="list">
+      <% @posts.each do |post| %>
+          <div class="item">
+            <div class="area-image">
+              <%= link_to (image_tag post.user.image.url, class: "icon"), user_path(post.user_id) %>
+            </div>
+            <div class="area-body">
+              <div class="title">
+                <%= link_to post.title.truncate(50), post, class: "link" %>
+              </div>
+              <div class="details">
+                <span class="date-time"><%= icon('fas', 'paper-plane') %><%= time_ago_in_words post.created_at %>前</span>
+                <span class="view"><%= icon('far', 'eye') %><%= post.impressionist_count %></span>
+                <span class="favorite"><%= icon('far', 'thumbs-up') %><%= post.favorites.count %></span>
+              </div>
+            </div>
+          </div>
+      <% end %>
+    </div>
   </div>
-  <div class="area__favorites">
-    <div class="headline"><%= icon('fas', 'thumbs-up') %>いいね済</div>
-    <% @favorite_posts.each do |post| %>
-      <div class="list">
-        <%= link_to post.title, post %>
-      </div>
-    <% end %>
+
+  <input type="radio" name="hide" id="tab2" >
+  <label class="tab" for="tab2"><%= icon('fas', 'thumbs-up') %>いいね済</label>
+  <div class="content">
+    <div class="list">
+      <% @favorite_posts.each do |post| %>
+        <div class="item">
+          <div class="area-image">
+            <%= link_to (image_tag post.user.image.url, class: "icon"), user_path(post.user_id) %>
+          </div>
+          <div class="area-body">
+            <div class="title">
+              <%= link_to post.title.truncate(50), post, class: "link" %>
+            </div>
+            <div class="details">
+              <span class="date-time"><%= icon('fas', 'paper-plane') %><%= time_ago_in_words post.created_at %>前</span>
+              <span class="view"><%= icon('far', 'eye') %><%= post.impressionist_count %></span>
+              <span class="favorite"><%= icon('far', 'thumbs-up') %><%= post.favorites.count %></span>
+            </div>
+          </div>
+        </div>
+      <% end %>
+    </div>
   </div>
 </div>
