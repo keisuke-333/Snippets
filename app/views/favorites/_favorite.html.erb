@@ -1,11 +1,11 @@
 <% if @post.favorited_by?(current_user) %>
-  <%= link_to post_favorites_path(@post.id), method: :delete, remote: true do %>
-    <%= icon('fas', 'thumbs-up') %>
+  <%= link_to post_favorites_path(@post.id), method: :delete, remote: true, class: "fav" do %>
+    <%= icon('fas', 'thumbs-up', class: 'fa-fw') %>
   <% end %>
   <span><%= @post.favorites.count %></span>
 <% else %>
-  <%= link_to post_favorites_path(@post.id), method: :post, remote: true do %>
-    <%= icon('far', 'thumbs-up') %>
+  <%= link_to post_favorites_path(@post.id), method: :post, remote: true, class: "fav" do %>
+    <%= icon('far', 'thumbs-up', class: 'fa-fw') %>
   <% end %>
   <span><%= @post.favorites.count %></span>
 <% end %>
