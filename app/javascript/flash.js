@@ -1,4 +1,4 @@
-document.addEventListener('turbolinks:load', () => {
+document.addEventListener('DOMContentLoaded', () => {
   if (document.querySelector(".flash") != null) {
 
     let ms = 600;

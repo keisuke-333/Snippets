@@ -1,4 +1,4 @@
-document.addEventListener('turbolinks:load', () => {
+document.addEventListener('DOMContentLoaded', () => {
   if (document.getElementById('js_img_prev') != null) {
     document.getElementById('user_image').addEventListener('change', e => {
 

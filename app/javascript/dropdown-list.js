@@ -1,4 +1,4 @@
-document.addEventListener('turbolinks:load', () => {
+document.addEventListener('DOMContentLoaded', () => {
   if (document.getElementById('js-menu-img') != null) {
 
     let $imgArea = document.getElementById('js-menu-img');
