@@ -41,6 +41,49 @@
         border-radius: 3px;
       }
     }
+
+    .area__follow {
+      text-align: center;
+
+      .btn {
+        text-decoration: none;
+        font-size: 1em;
+        padding: 1em 1.5em;
+        border-radius: 1.5em;
+
+        &.yet {
+          color: rgb(65, 173, 255);
+          background: white;
+          border: 2px solid rgb(65, 173, 255);
+
+          &:hover {
+            transition: .1s;
+            background: rgba(65, 173, 255, 0.1);
+          }
+        }
+
+        &.done {
+          color: white;
+          background: rgb(65, 173, 255);
+
+          .hover {
+            display: none;
+          }
+
+          &:hover {
+            background: red;
+
+            .nomal {
+              display: none;
+            }
+
+            .hover {
+              display: inline;
+            }
+          }
+        }
+      }
+    }
   }
 
   &__center {

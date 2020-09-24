@@ -1,5 +1,7 @@
 <% if @user.followed_by?(current_user) %>
-  <%= link_to 'フォロー済み', user_relationships_path(@user.id), method: :delete, remote: true %>
+  <%= link_to user_relationships_path(@user.id), method: :delete, remote: true, class: "btn done", data: {confirm: "本当にフォロー解除してもよろしいですか？"} do %>
+    <span class="nomal">フォロー中</span><span class="hover">フォロー解除</span>
+  <% end %>
 <% else %>
-  <%= link_to 'フォローする', user_relationships_path(@user.id), method: :post, remote: true %>
+  <%= link_to 'フォロー', user_relationships_path(@user.id), method: :post, remote: true, class: "btn yet" %>
 <% end %>
