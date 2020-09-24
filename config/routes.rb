@@ -22,7 +22,9 @@ Rails.application.routes.draw do
     put "password" => "users/passwords#update", as: :update_user_password
   end
 
-  resources :users, only: :show
+  resources :users, only: :show do
+    resource :relationships, only: [:create, :destroy]
+  end
 
   resources :posts do
     resource :favorites, only: [:create, :destroy]
