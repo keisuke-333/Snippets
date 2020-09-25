@@ -72,6 +72,7 @@
       }
 
       .list {
+        margin-bottom: 3em;
 
         .item {
           padding: 15px;
@@ -116,6 +117,31 @@
                 margin-right: 0.3em;
               }
             }
+          }
+        }
+      }
+
+      .pagination {
+        text-align: center;
+
+        span {
+          display: inline-block;
+          width: 2em;
+          height: 2em;
+          line-height: 2em;
+          margin-right: 0.3em;
+
+          a {
+            &:hover {
+              text-decoration: none;
+              opacity: 0.7;
+            }
+          }
+
+          &.current {
+            background: #094067;
+            color: white;
+            border-radius: 0.5em;
           }
         }
       }
