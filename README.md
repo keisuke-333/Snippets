@@ -20,3 +20,4 @@
 - coderay
 - impressionist
 - ransack
+- kaminari

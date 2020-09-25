@@ -39,6 +39,9 @@ gem 'impressionist'
 # 検索機能
 gem 'ransack'
 
+# ページネーション
+gem 'kaminari'
+
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
 end
