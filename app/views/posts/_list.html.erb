@@ -1,0 +1,20 @@
+<div class="list">
+  <% @posts.each do |post| %>
+    <div class="item">
+      <div class="area-image">
+        <%= link_to (image_tag post.user.image.url, class: "icon"), user_path(post.user_id) %>
+      </div>
+      <div class="area-body">
+        <div class="title">
+          <%= link_to post.title.truncate(50), post, class: "link" %>
+        </div>
+        <div class="details">
+          <span class="date-time"><%= icon('fas', 'paper-plane') %><%= time_ago_in_words post.created_at %>前</span>
+          <span class="view"><%= icon('far', 'eye') %><%= post.impressionist_count %></span>
+          <span class="favorite"><%= icon('far', 'thumbs-up') %><%= post.favorites.count %></span>
+        </div>
+      </div>
+    </div>
+  <% end %>
+</div>
+<%= paginate @posts, remote: true %>
