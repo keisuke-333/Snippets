@@ -97,7 +97,7 @@
     }
 
     .tab {
-      width: calc(100%/2);
+      width: calc(100%/4);
       height: 50px;
       line-height: 50px;
       background-color: #d8eefe;
@@ -125,6 +125,11 @@
       display: none;
       width: 100%;
       margin-top: 2em;
+
+      .count {
+        text-align: center;
+        margin-bottom: 0.5em;
+      }
 
       .list {
 
