@@ -1,3 +1,5 @@
+<%= javascript_pack_tag 'tab-switch' %>
+
 <div class="user-show__top">
   <div class="area__image">
     <%= image_tag @user.image.url, class: "icon"%>
@@ -21,107 +23,34 @@
 </div>
 
 <div class="user-show__center">
-  <input type="radio" name="hide" id="tab1" checked>
-  <label class="tab" for="tab1"><%= icon('fas', 'th-list') %>投稿一覧</label>
-  <div class="content">
-    <div class="count">
-      <%= @posts.count %>件
+  <div class="tab">
+    <div class="link checked">
+      <%= link_to user_path, remote: true do %>
+        <%= icon('fas', 'th-list') %>投稿一覧
+      <% end %>
     </div>
-    <div class="list">
-      <% @posts.each do |post| %>
-          <div class="item">
-            <div class="area-image">
-              <%= link_to (image_tag post.user.image.url, class: "icon"), user_path(post.user_id) %>
-            </div>
-            <div class="area-body">
-              <div class="title">
-                <%= link_to post.title.truncate(50), post, class: "link" %>
-              </div>
-              <div class="details">
-                <span class="date-time"><%= icon('fas', 'paper-plane') %><%= time_ago_in_words post.created_at %>前</span>
-                <span class="view"><%= icon('far', 'eye') %><%= post.impressionist_count %></span>
-                <span class="favorite"><%= icon('far', 'thumbs-up') %><%= post.favorites.count %></span>
-              </div>
-            </div>
-          </div>
+
+    <div class="link">
+      <%= link_to favorites_user_path, remote: true do %>
+        <%= icon('fas', 'thumbs-up') %>いいね済
+      <% end %>
+    </div>
+
+    <div class="link">
+      <%= link_to followings_user_path, remote: true do %>
+        <%= icon('fas', 'user-check') %>フォロー済
+      <% end %>
+    </div>
+
+    <div class="link">
+      <%= link_to followers_user_path, remote: true do %>
+        <%= icon('fas', 'user-friends') %>フォロワー
       <% end %>
     </div>
   </div>
 
-  <input type="radio" name="hide" id="tab2" >
-  <label class="tab" for="tab2"><%= icon('fas', 'thumbs-up') %>いいね済</label>
-  <div class="content">
-    <div class="count">
-      <%= @favorite_posts.count %>件
-    </div>
-    <div class="list">
-      <% @favorite_posts.each do |post| %>
-        <div class="item">
-          <div class="area-image">
-            <%= link_to (image_tag post.user.image.url, class: "icon"), user_path(post.user_id) %>
-          </div>
-          <div class="area-body">
-            <div class="title">
-              <%= link_to post.title.truncate(50), post, class: "link" %>
-            </div>
-            <div class="details">
-              <span class="date-time"><%= icon('fas', 'paper-plane') %><%= time_ago_in_words post.created_at %>前</span>
-              <span class="view"><%= icon('far', 'eye') %><%= post.impressionist_count %></span>
-              <span class="favorite"><%= icon('far', 'thumbs-up') %><%= post.favorites.count %></span>
-            </div>
-          </div>
-        </div>
-      <% end %>
-    </div>
+  <div id="js-ajax-show-list" class="content">
+    <%= render partial: "posts" %>
   </div>
-
-  <input type="radio" name="hide" id="tab3" >
-  <label class="tab" for="tab3"><%= icon('fas', 'user-check') %>フォロー済</label>
-  <div class="content">
-    <div class="count">
-      <%= @followings.count %>人
-    </div>
-    <div class="list">
-      <% @followings.each do |user| %>
-        <div class="item">
-          <div class="area-image">
-            <%= link_to (image_tag user.image.url, class: "icon"), user_path(user.id) %>
-          </div>
-          <div class="area-body">
-            <div class="title">
-              <%= link_to user.name, user, class: "link" %>
-            </div>
-            <div class="details">
-              <%= user.profile %>
-            </div>
-          </div>
-        </div>
-      <% end %>
-    </div>
-  </div>
-
-  <input type="radio" name="hide" id="tab4" >
-  <label class="tab" for="tab4"><%= icon('fas', 'user-friends') %>フォロワー</label>
-  <div class="content">
-    <div class="count">
-      <%= @followers.count %>人
-    </div>
-    <div class="list">
-      <% @followers.each do |user| %>
-        <div class="item">
-          <div class="area-image">
-            <%= link_to (image_tag user.image.url, class: "icon"), user_path(user.id) %>
-          </div>
-          <div class="area-body">
-            <div class="title">
-              <%= link_to user.name, user, class: "link" %>
-            </div>
-            <div class="details">
-              <%= user.profile %>
-            </div>
-          </div>
-        </div>
-      <% end %>
-    </div>
-  </div>
+  
 </div>
