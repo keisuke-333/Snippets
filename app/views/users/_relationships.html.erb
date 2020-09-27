@@ -1,0 +1,21 @@
+<div class="count">
+  <%= @relationships.total_count %>人
+</div>
+<div class="list">
+  <% @relationships.each do |user| %>
+    <div class="item">
+      <div class="area-image">
+        <%= link_to (image_tag user.image.url, class: "icon"), user_path(user.id) %>
+      </div>
+      <div class="area-body">
+        <div class="title">
+          <%= link_to user.name, user, class: "link" %>
+        </div>
+        <div class="details">
+          <%= user.profile %>
+        </div>
+      </div>
+    </div>
+  <% end %>
+</div>
+<%= paginate @relationships, remote: true %>
