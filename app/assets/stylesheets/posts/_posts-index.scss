@@ -43,6 +43,21 @@
       width: 600px;
       margin-right: 2em;
 
+      .reset-link-area {
+        height: 1em;
+        line-height: 1em;
+        text-align: center;
+
+        .link {
+          text-decoration: none;
+          color: #094067;
+
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+      }
+
       .post_search {
         padding-bottom: 0.5em;
         border-bottom: 1px solid #6665658f;
