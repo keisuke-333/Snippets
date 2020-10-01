@@ -34,6 +34,7 @@
         margin-bottom: 30px;
 
         .btn {
+          cursor: pointer;
           display: block;
           text-align: center;
           border-radius: 3px;
@@ -44,7 +45,7 @@
           background: #5f6c7b;
 
           &:hover {
-            cursor: pointer;
+            opacity: 0.9;
           }
         }
 
@@ -71,6 +72,10 @@
           border-radius: 3px;
           border: none;
           cursor: pointer;
+
+          &:hover {
+            opacity: 0.9;
+          }
         }
       }
     }
@@ -108,6 +113,10 @@
           padding: 8px;
           border-radius: 3px;
           text-decoration: none;
+
+          &:hover {
+            opacity: 0.9;
+          }
         }
       }
     }

@@ -67,20 +67,20 @@
       .link {
         border-radius: 9px;
         color: #232323;
-        display: block;
+        display: inline-block;
         padding: 15px;
+        transition: .1s;
+        transform: scale(1);
 
         &:hover {
-          box-shadow: 0 0 6px #fffffe;
+          background: #fffffe;
+          transform: scale(1.05);
         }
 
         &.new {
-          background: #fffffe;
-
-          &:hover {
-            transition: .2s;
-            background: #e7e7e6;
-          }
+          padding: 17px;
+          color: #fffffe;
+          background: #094067;
         }
       }
     }
