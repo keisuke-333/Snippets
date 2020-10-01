@@ -3,6 +3,13 @@ body {
   font-family: 'ヒラギノ丸ゴ ProN', 'Hiragino Maru Gothic ProN', sans-serif;
   line-height: 180%;
   letter-spacing: 0.05em;
+  display: flex;
+  flex-flow: column;
+  min-height: 100vh;
+}
+
+main {
+  flex: 1;
 }
 
 a {
@@ -15,8 +22,13 @@ a {
   }
 }
 
-.container-center {
-  margin: 0 auto;
-  width: 360px;
-  padding: 30px;
+.footer {
+  width: 100%;
+  background: #3da9fc;
+  color: #fffffe;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 90px;
+  letter-spacing: 0.2em;
 }
