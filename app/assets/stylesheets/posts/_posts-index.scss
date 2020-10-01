@@ -7,13 +7,26 @@
     margin: 3em;
 
     &__left {
-      margin-right: 1em;
 
       .select-language {
+        width: 50px;
         margin-top: 1.5em;
 
         .link {
-          font-size: 2em;
+          display: flex;
+          justify-content: flex-end;
+          align-items: center;
+
+          i {
+            font-size: 0.5em;
+          }
+
+          a {
+            i {
+              font-size: 2em;
+            }
+          }
+
           margin-bottom: 0.6em;
 
           &:hover {
@@ -40,8 +53,8 @@
     }
 
     &__center {
-      width: 600px;
-      margin-right: 2em;
+      width: 800px;
+      margin: 0 2em;
 
       .reset-link-area {
         height: 1em;
@@ -164,15 +177,17 @@
     }
 
     &__right {
+      width: 100px;
+
       .switch {
         margin-top: 1.5em;
 
         .link {
-          font-size: 1.2em;
           margin-bottom: 0.4em;
 
           a {
             color: #5f6c7b;
+            text-decoration: none;
 
             &:hover {
               opacity: 0.5;

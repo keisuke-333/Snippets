@@ -4,7 +4,7 @@
   height: 80px;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-around;
   padding: 20px 30px;
   background: #3da9fc;
 
@@ -24,7 +24,6 @@
 
     &-item {
       margin-right: 20px;
-      border-radius: 9px;
 
       .fa-edit {
         font-size: 20px;
@@ -66,22 +65,22 @@
       }
 
       .link {
+        border-radius: 9px;
         color: #232323;
         display: block;
-        padding: 20px;
-      }
-
-      &:hover {
-        background-color: rgba(white, 0.8);
-        transition: .3s;
-      }
-
-      &.new {
-        background-color: #f77261;
-        border: 2px solid white;
+        padding: 15px;
 
         &:hover {
-          background-color: #fa513b;
+          box-shadow: 0 0 6px #fffffe;
+        }
+
+        &.new {
+          background: #fffffe;
+
+          &:hover {
+            transition: .2s;
+            background: #e7e7e6;
+          }
         }
       }
     }
