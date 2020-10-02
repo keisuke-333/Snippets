@@ -12,6 +12,7 @@
 
       <div class="submit-field">
         <%= f.submit t('.sign_in'), class: "btn" %>
+        <%= link_to 'ゲストログイン（閲覧用）', users_guest_sign_in_path, method: :post, class: "btn guest" %>
       </div>
     <% end %>
 

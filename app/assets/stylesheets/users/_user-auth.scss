@@ -36,6 +36,15 @@
         border-radius: 0.3em;
         cursor: pointer;
         border: none;
+        margin-bottom: 0.5em;
+
+        &.guest {
+          background: #078080;
+          display: block;
+          text-decoration: none;
+          text-align: center;
+          padding: 0.3em;
+        }
 
         &:hover {
           opacity: 0.9;
