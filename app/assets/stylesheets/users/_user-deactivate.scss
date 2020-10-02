@@ -34,6 +34,10 @@
       text-decoration: none;
       margin-bottom: 50px;
 
+      &:hover {
+        opacity: 0.9;
+      }
+
       .fa-user-slash {
         margin-right: 5px;
       }

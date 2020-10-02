@@ -31,12 +31,24 @@
       margin-bottom: 30px;
 
       .btn {
-        display: block;
-        background-color: #094067;
+        background: #094067;
         color: #fffffe;
-        border-radius: 3px;
-        border: none;
+        border-radius: 0.3em;
         cursor: pointer;
+        border: none;
+        margin-bottom: 0.5em;
+
+        &.guest {
+          background: #078080;
+          display: block;
+          text-decoration: none;
+          text-align: center;
+          padding: 0.3em;
+        }
+
+        &:hover {
+          opacity: 0.9;
+        }
       }
     }
   }

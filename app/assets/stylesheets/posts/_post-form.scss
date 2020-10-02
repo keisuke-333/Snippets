@@ -42,11 +42,16 @@
 
       .btn {
         display: block;
+        padding: 0.7em;
         background-color: #094067;
         color: #fffffe;
         border-radius: 3px;
         border: none;
         cursor: pointer;
+
+        &:hover {
+          opacity: 0.9;
+        }
       }
     }
 
