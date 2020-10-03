@@ -1,10 +1,11 @@
 <div class="user-edit">
 
   <div class="user-edit__main">
+    <% if resource.errors.any? %>
+      <span class="error-messages"><%= resource.errors.full_messages.first %></span>
+    <% end %>
     <div class="form">
       <%= form_for(resource, as: resource_name, url: update_user_registration_path, html: { method: :put }) do |f| %>
-        <%= render "devise/shared/error_messages", resource: resource %>
-
         <div class="area-image">
           <%= image_tag @user.image.url, id: :js_img_prev , class: "icon" %>
         </div>
