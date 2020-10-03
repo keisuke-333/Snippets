@@ -32,3 +32,18 @@ a {
   height: 90px;
   letter-spacing: 0.2em;
 }
+
+
+// エラーメッセージ用
+.field_with_errors {
+  display: contents;
+
+  input {
+    border: 2px solid #ef4565;
+    background: #fec7d7;
+  }
+}
+
+.error-messages {
+  color: #ef4565;
+}

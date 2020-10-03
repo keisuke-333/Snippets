@@ -4,6 +4,9 @@ ja:
     models:
       post: 投稿
     attributes:
+      user:
+        name: 名前
+        profile: プロフィール
       post:
         title: タイトル
         language: 言語

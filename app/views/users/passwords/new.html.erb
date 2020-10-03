@@ -1,18 +1,18 @@
 <div class="password-forget">
   <h2 class="title">パスワード再設定メールを送る</h2>
   <div class="form">
-  <%= form_for(resource, as: resource_name, url: new_user_password_path, html: { method: :post }) do |f| %>
-    <%= render "devise/shared/error_messages", resource: resource %>
+    <%= form_for(resource, as: resource_name, url: new_user_password_path, html: { method: :post }) do |f| %>
+      <div class="field">
+        <%= f.email_field :email, autofocus: true, autocomplete: "email", placeholder: "メールアドレス" , required: true, maxlength: '100' %>
+        <% if resource.errors.include?(:email) %>
+          <span class="error-messages"><%= resource.errors.full_messages_for(:email).first %></span>
+        <% end %>
+      </div>
 
-    <div class="field">
-      <%= f.email_field :email, autofocus: true, autocomplete: "email", placeholder: "メールアドレス" , required: true, maxlength: '100' %>
-    </div>
-
-    <div class="submit-field">
-      <%= f.submit "送信", class: "btn" %>
-    </div>
-
-  <% end %>
+      <div class="submit-field">
+        <%= f.submit "送信", class: "btn" %>
+      </div>
+    <% end %>
   </div>
 
   <%= render "users/shared/links" %>
