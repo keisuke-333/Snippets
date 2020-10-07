@@ -63,10 +63,7 @@
 
     .submit-field {
       height: 40px;
-
-      @media (max-width: 768px) {
-        margin-bottom: 3em;
-      }
+      margin-bottom: 3em;
 
       .btn {
         display: block;
