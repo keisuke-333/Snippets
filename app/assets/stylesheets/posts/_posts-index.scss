@@ -2,11 +2,22 @@
   margin: 0 auto;
   width: 750px;
 
+  @media (max-width: 414px) {
+    width: 100%;
+  }
+
   .container {
     display: flex;
     margin: 3em;
 
+    @media (max-width: 414px) {
+      margin: 0;
+    }
+
     &__left {
+      @media (max-width: 414px) {
+        display: none;
+      }
 
       .select-language {
         width: 50px;
@@ -16,6 +27,7 @@
           display: flex;
           justify-content: flex-end;
           align-items: center;
+          margin-bottom: 0.6em;
 
           i {
             font-size: 0.5em;
@@ -26,8 +38,6 @@
               font-size: 2em;
             }
           }
-
-          margin-bottom: 0.6em;
 
           &:hover {
             opacity: 0.5;
@@ -56,10 +66,19 @@
       width: 800px;
       margin: 0 2em;
 
+      @media (max-width: 414px) {
+        width: 100%;
+        margin: 0;
+      }
+
       .reset-link-area {
         height: 1em;
         line-height: 1em;
         text-align: center;
+
+        @media (max-width: 414px) {
+          margin-top: 1em;
+        }
 
         .link {
           text-decoration: none;
@@ -153,6 +172,10 @@
       .pagination {
         text-align: center;
 
+        @media (max-width: 414px) {
+          margin-bottom: 3em;
+        }
+
         span {
           display: inline-block;
           width: 2em;
@@ -178,6 +201,10 @@
 
     &__right {
       width: 100px;
+
+      @media (max-width: 414px) {
+        display: none;
+      }
 
       .switch {
         margin-top: 1.5em;

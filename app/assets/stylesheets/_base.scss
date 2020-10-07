@@ -31,6 +31,11 @@ a {
   justify-content: center;
   height: 90px;
   letter-spacing: 0.2em;
+
+  @media (max-width: 414px) {
+    height: 80px;
+    letter-spacing: 0;
+  }
 }
 
 
@@ -45,5 +50,6 @@ a {
 }
 
 .error-messages {
+  font-weight: bold;
   color: #ef4565;
 }

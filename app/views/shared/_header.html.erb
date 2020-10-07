@@ -5,7 +5,7 @@
       <% if user_signed_in? %>
         <li class="header__menu-item">
           <%= link_to new_post_path, class: "link" do %>
-            <%= icon('fas', 'edit') %>投稿する
+            <%= icon('fas', 'edit', class: 'fa-fw') %><span class="responsive">投稿する</span>
           <% end %>
         </li>
         <li class="header__menu-item--img" id="js-menu-img">
@@ -22,10 +22,10 @@
         </div>
     <% else %>
         <li class="header__menu-item">
-          <%= link_to "新規登録", new_user_registration_path, class: "link new" %>
+          <%= link_to "ログイン", new_user_session_path, class: "link" %>
         </li>
         <li class="header__menu-item">
-          <%= link_to "ログイン", new_user_session_path, class: "link" %>
+          <%= link_to "新規登録", new_user_registration_path, class: "link new" %>
         </li>
       <% end %>
     </ul>
