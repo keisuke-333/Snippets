@@ -26,25 +26,25 @@
   <div class="tab">
     <div class="link checked">
       <%= link_to user_path, remote: true do %>
-        <%= icon('fas', 'th-list') %>投稿一覧
+        <%= icon('fas', 'th-list') %><span class="responsive">投稿一覧</span>
       <% end %>
     </div>
 
     <div class="link">
       <%= link_to favorites_user_path, remote: true do %>
-        <%= icon('fas', 'thumbs-up') %>いいね済
+        <%= icon('fas', 'thumbs-up') %><span class="responsive">いいね済</span>
       <% end %>
     </div>
 
     <div class="link">
       <%= link_to followings_user_path, remote: true do %>
-        <%= icon('fas', 'user-check') %>フォロー済
+        <%= icon('fas', 'user-check') %><span class="responsive">フォロー済</span>
       <% end %>
     </div>
 
     <div class="link">
       <%= link_to followers_user_path, remote: true do %>
-        <%= icon('fas', 'user-friends') %>フォロワー
+        <%= icon('fas', 'user-friends') %><span class="responsive">フォロワー</span>
       <% end %>
     </div>
   </div>

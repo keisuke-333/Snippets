@@ -7,8 +7,20 @@
     background: #fffffe;
     box-shadow: 0 0 6px #5f6c7b;
 
+    @media (max-width: 414px) {
+      width: 100%;
+      padding: 0;
+      margin: 0;
+      background: none;
+      box-shadow: none;
+    }
+
     .form {
       margin: 20px 0;
+
+      @media (max-width: 414px) {
+        margin: 0;
+      }
 
       input,
       textarea {
@@ -22,6 +34,11 @@
         text-align: center;
         margin-bottom: 20px;
 
+        @media (max-width: 414px) {
+          margin: 0;
+          margin-top: 20px;
+        }
+
         .icon {
           width: 150px;
           height: 150px;
@@ -33,6 +50,10 @@
       .image-field {
         margin-bottom: 30px;
 
+        @media (max-width: 414px) {
+          margin: 0;
+        }
+
         .btn {
           cursor: pointer;
           display: block;
@@ -43,6 +64,10 @@
           padding: 15px 0;
           color: #fffffe;
           background: #5f6c7b;
+
+          @media (max-width: 414px) {
+            padding: 0.5em;
+          }
 
           &:hover {
             opacity: 0.9;

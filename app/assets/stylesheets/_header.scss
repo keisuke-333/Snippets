@@ -8,6 +8,12 @@
   padding: 20px 30px;
   background: #3da9fc;
 
+  @media (max-width: 414px) {
+    height: 60px;
+    justify-content: space-between;
+    padding: 0 15px;
+  }
+
   & a:hover {
     text-decoration: none;
   }
@@ -16,18 +22,23 @@
     color: #232323;
     font-size: 30px;
     font-family: 'Futura', sans-serif;
+
+    @media (max-width: 414px) {
+      font-size: 1.5em;
+    }
   }
 
   &__menu {
     display: flex;
+    align-items: center;
     position: relative;
 
     &-item {
       margin-right: 20px;
 
-      .fa-edit {
-        font-size: 20px;
-        margin-right: 3px;
+      @media (max-width: 414px) {
+        margin-right: 5px;
+        font-size: 14px;
       }
 
       &--img {
@@ -36,18 +47,32 @@
         display: flex;
         align-items: center;
 
-        &:hover .icon {
-          box-shadow: 0 0 20px white;
-          transition: .2s;
+        @media (max-width: 414px) {
+          margin: 0;
         }
 
-        &:hover .fa-caret-down {
-          color: white;
-          transition: .2s;
-        }
+        &:hover {
+          .icon {
+            box-shadow: 0 0 20px white;
+            transition: .2s;
+          }
 
-        .caret-down-clicked {
-          color: white;
+          .fa-caret-down {
+            color: white;
+            transition: .2s;
+          }
+
+          @media (max-width: 1024px) {
+            .icon {
+              box-shadow: none;
+              transition: none;
+            }
+
+            .fa-caret-down {
+              color: black;
+              transition: none;
+            }
+          }
         }
 
         .icon {
@@ -55,11 +80,25 @@
           height: 57px;
           border-radius: 50%;
           box-shadow: 0 0 6px gray;
+
+          @media (max-width: 414px) {
+            width: 45px;
+            height: 45px;
+            margin-left: 0.3em;
+          }
         }
 
         .fa-caret-down {
           cursor: pointer;
           padding-left: 5px;
+
+          @media (max-width: 414px) {
+            padding: 0;
+          }
+
+          &.caret-down-clicked {
+            color: white;
+          }
         }
 
       }
@@ -72,6 +111,25 @@
         transition: .1s;
         transform: scale(1);
 
+        @media (max-width: 414px) {
+          padding: 8px;
+
+          .responsive {
+            display: none;
+          }
+        }
+
+        .fa-edit {
+          font-size: 20px;
+          margin-right: 3px;
+
+          @media (max-width: 414px) {
+            font-size: 30px;
+            width: 30px;
+            vertical-align: middle;
+          }
+        }
+
         &:hover {
           background: #fffffe;
           transform: scale(1.05);
@@ -81,6 +139,10 @@
           padding: 17px;
           color: #fffffe;
           background: #094067;
+
+          @media (max-width: 414px) {
+            padding: 10px;
+          }
         }
       }
     }
@@ -114,4 +176,8 @@
   border: 1px solid #ddd;
   border-radius: 3px;
   box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.15);
+
+  @media (max-width: 414px) {
+    top: 53px;
+  }
 }
