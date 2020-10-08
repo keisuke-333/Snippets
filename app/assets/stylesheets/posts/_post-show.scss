@@ -5,7 +5,15 @@
   background: #fffffe;
   box-shadow: 0 0 6px #5f6c7b;
 
-  @media (max-width: 768px) {
+  font-family: -apple-system,
+    "Segoe UI",
+    "Helvetica Neue",
+    "Hiragino Kaku Gothic ProN",
+    メイリオ,
+    meiryo,
+    sans-serif;
+
+  @media (max-width: 812px) {
     width: 100%;
     margin: 0;
     box-shadow: none;
@@ -73,67 +81,199 @@
     }
 
     .area-code {
-      font-size: 18px;
+      color: #333;
 
       @media (max-width: 414px) {
         font-size: 1em;
       }
 
+      .fa-link {
+        display: none;
+      }
+
+      ol,
+      ul {
+        margin: 1em 0;
+        padding-left: 40px;
+      }
+
+      ol {
+        list-style-type: decimal;
+      }
+
+      ul {
+        list-style-type: disc;
+      }
+
       h1,
       h2,
       h3,
-      h4 {
-        padding: 0.3em 0;
-        margin: 0.3em 0;
+      h4,
+      h5 {
+        margin-top: 2.2em;
+        margin-bottom: 2.4rem;
       }
 
       h1,
       h2 {
         border-bottom: 1px solid #ddd;
+        padding-bottom: 0.1em
       }
 
       h1 {
         font-size: 1.8em;
-
-        @media (max-width: 414px) {
-          font-size: 1.6em;
-        }
       }
 
       h2 {
         font-size: 1.6em;
-
-        @media (max-width: 414px) {
-          font-size: 1.4em;
-        }
       }
 
       h3 {
-        font-size: 1.4em;
-
-        @media (max-width: 414px) {
-          font-size: 1.2em;
-        }
+        font-size: 1.4em
       }
 
       h4 {
-        font-size: 1.2em;
-
-        @media (max-width: 414px) {
-          font-size: 1.1em;
-        }
+        font-size: 1.2em
       }
 
-      pre {
-        background: #d8eefe;
-        padding: 0.6em;
-        margin: 0.3em 0;
-        overflow-x: auto;
+
+      p {
+        line-height: 1.9;
       }
 
       code {
-        background: rgb(230, 228, 228);
-        overflow-wrap: break-word;
+        background-color: #eee;
+        color: #333;
+        padding: 0.1em 0.4em;
+        font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace;
+      }
+
+      .code-frame {
+
+        background-color: #364549;
+        padding: 1em 32px;
+        margin: 1.5em -32px;
+        font-size: 0.9em;
+
+        @media (max-width: 812px) {
+          margin: 1.5em -30px;
+        }
+
+        @media (max-width: 414px) {
+          margin: 1.5em -16px;
+        }
+
+        .code-lang {
+          padding: 2px 4px;
+          transform: translateY(-1em);
+
+          span {
+            padding: .5em;
+            color: #fff;
+            background-color: #666;
+          }
+        }
+
+        .highlight {
+          overflow-x: auto;
+          color: #e3e3e3;
+
+          pre {
+            font-family: "SFMono-Regular",
+              Consolas,
+              "Liberation Mono",
+              Menlo,
+              Courier,
+              monospace;
+            line-height: 1.8;
+          }
+
+          .o,
+          .p,
+          .nb,
+          .ni,
+          .nl,
+          .nn,
+          .py,
+          .nv,
+          .w,
+          .bp,
+          .vc,
+          .vg,
+          .vi,
+          .vm {
+            color: #e3e3e3;
+          }
+
+          .c,
+          .ch,
+          .cm,
+          .cp,
+          .cpf,
+          .c1,
+          .cs,
+          .gu {
+            color: #9dabae;
+          }
+
+          .k,
+          .kc,
+          .kd,
+          .kp,
+          .kr,
+          .kt,
+          .no {
+            color: #ebd247;
+          }
+
+          .l,
+          .m,
+          .mb,
+          .mf,
+          .mh,
+          .mi,
+          .mo,
+          .se,
+          .il {
+            color: #a980f5;
+          }
+
+          .n,
+          .fm,
+          .gi,
+          .na,
+          .nc,
+          .nd,
+          .ne,
+          .nf,
+          .nx {
+            color: #8bdf4c;
+          }
+
+          .ld,
+          .s,
+          .sa,
+          .sb,
+          .sc,
+          .dl,
+          .sd,
+          .s2,
+          .sh,
+          .si,
+          .sx,
+          .sr,
+          .s1,
+          .ss {
+            color: #41b7d7;
+          }
+
+          .gd,
+          .kn,
+          .nt,
+          .ow {
+            color: #ff8095;
+          }
+        }
       }
     }
   }
@@ -157,5 +297,4 @@
 
     }
   }
-
 }
