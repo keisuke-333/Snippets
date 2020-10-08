@@ -42,6 +42,10 @@ gem 'ransack'
 # ページネーション
 gem 'kaminari'
 
+# Markdown
+gem 'qiita-markdown'
+gem 'github-linguist'
+
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
 end
