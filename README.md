@@ -16,8 +16,7 @@
 - carrierwave
 - MiniMagick
 - font-awesome-sass
-- redcarpet
-- coderay
 - impressionist
 - ransack
 - kaminari
+- qiita-markdown

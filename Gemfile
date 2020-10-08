@@ -27,12 +27,6 @@ gem 'mini_magick'
 # Font Awesome
 gem 'font-awesome-sass'
 
-# Markdown
-gem 'redcarpet'
-
-# シンタックスハイライト
-gem 'coderay'
-
 # PV数を計算
 gem 'impressionist'
 
@@ -41,6 +35,10 @@ gem 'ransack'
 
 # ページネーション
 gem 'kaminari'
+
+# Markdown
+gem 'qiita-markdown'
+gem 'github-linguist'
 
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
