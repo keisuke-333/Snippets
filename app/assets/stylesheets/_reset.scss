@@ -132,3 +132,59 @@ table {
   border-collapse: collapse;
   border-spacing: 0;
 }
+
+input,
+button,
+textarea,
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+
+  font-family: inherit;
+
+  border-radius: 0;
+
+  box-sizing: border-box;
+
+  font-size: 16px;
+
+  color: inherit;
+}
+
+label {
+  cursor: pointer;
+}
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button,
+input[type="month"]::-webkit-outer-spin-button,
+input[type="month"]::-webkit-inner-spin-button,
+input[type="datetime-local"]::-webkit-outer-spin-button,
+input[type="datetime-local"]::-webkit-inner-spin-button,
+input[type="week"]::-webkit-outer-spin-button,
+input[type="week"]::-webkit-inner-spin-button,
+input[type="time"]::-webkit-outer-spin-button,
+input[type="time"]::-webkit-inner-spin-button,
+input[type="date"]::-webkit-outer-spin-button,
+input[type="date"]::-webkit-inner-spin-button {
+  margin: 0;
+  display: none;
+}
+
+input[type="number"],
+input[type="month"],
+input[type="datetime-local"],
+input[type="week"],
+input[type="time"],
+input[type="date"] {
+  -moz-appearance: textfield;
+}
+
+input[type="date"]::-webkit-clear-button,
+input[type="month"]::-webkit-clear-button,
+input[type="datetime-local"]::-webkit-clear-button,
+input[type="time"]::-webkit-clear-button,
+input[type="week"]::-webkit-clear-button {
+  -webkit-appearance: none;
+}
