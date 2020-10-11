@@ -1,7 +1,6 @@
 ## snippetアプリを作成
 
-### 概要
-`Rails`でSnippetアプリを作成しました。  
+### URL 
 https://snippets-for-webdevel.herokuapp.com/
 
 ### 作成した経緯
