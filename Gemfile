@@ -21,6 +21,9 @@ gem 'devise-i18n'
 # 画像投稿機能
 gem 'carrierwave'
 
+# 画像保存先をAWS S3にする
+gem 'fog-aws'
+
 # 画像ファイルの加工
 gem 'mini_magick'
 
