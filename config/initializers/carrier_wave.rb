@@ -7,6 +7,6 @@ if Rails.env.production?
       region: Rails.application.credentials.dig(:aws, :region),
     }
     config.fog_directory = Rails.application.credentials.dig(:aws, :bucket)
-    config.asset_host = "https://d26soiw9xrcvtt.cloudfront.net/"
+    config.asset_host = "https://d26soiw9xrcvtt.cloudfront.net"
   end
 end
