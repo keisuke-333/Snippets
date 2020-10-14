@@ -36,5 +36,6 @@ Webサービスを作ってみようと思い、こちらのアプリを作成�
 - qiita-markdown
 
 ## ER図
-![snippets](https://user-images.githubusercontent.com/65392082/96019995-589da680-0e88-11eb-91de-fef34962f14d.png)
+![snippets](https://user-images.githubusercontent.com/65392082/96021509-7ff57300-0e8a-11eb-9a82-c0c9a2972d67.png)
+
 
