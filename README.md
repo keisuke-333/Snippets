@@ -25,7 +25,7 @@ Webサービスを作ってみようと思い、こちらのアプリを作成�
 - Heroku
 - AWSサービス（S3・CloudFront・IAM）
 
-#### gem
+### gem
 - devise 4.7.2
 - carrierwave
 - MiniMagick
@@ -34,3 +34,6 @@ Webサービスを作ってみようと思い、こちらのアプリを作成�
 - ransack
 - kaminari
 - qiita-markdown
+
+## ER図
+![snippets_er](https://user-images.githubusercontent.com/65392082/96019058-f6907180-0e86-11eb-9443-eb17cbcc67ab.png)
