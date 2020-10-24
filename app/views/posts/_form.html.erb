@@ -7,7 +7,7 @@
 
       <div class="top">
         <div class="title-field">
-          <%= f.text_field :title, placeholder: "タイトル", required: true, maxlength: 50 %>
+          <%= f.text_field :title, placeholder: "タイトル", required: true, maxlength: Post::TITLE_MAXIMUM_LENGTH %>
           <% if @post.errors.include?(:title) %>
             <p><%= @post.errors.full_messages_for(:title).first %></p>
           <% end %>

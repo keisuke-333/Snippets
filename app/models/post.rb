@@ -1,5 +1,5 @@
 class Post < ApplicationRecord
-  validates :title, presence: true, length: { maximum: 50 }
+  validates :title, presence: true, length: { maximum: TITLE_MAXIMUM_LENGTH = 50 }
   validates :language, presence: true
   validates :code, presence: true
 

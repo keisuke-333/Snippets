@@ -6,7 +6,7 @@
       </div>
       <div class="area-body">
         <div class="title">
-          <%= link_to post.title.truncate(50), post, class: "link" %>
+          <%= link_to post.title.truncate(Post::TITLE_MAXIMUM_LENGTH), post, class: "link" %>
         </div>
         <div class="details">
           <span class="date-time"><%= icon('fas', 'paper-plane') %><%= time_ago_in_words post.created_at %>前</span>
