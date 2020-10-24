@@ -2,9 +2,11 @@ class PostsController < ApplicationController
   before_action :authenticate_user!
   before_action :set_post, only: [:show, :edit, :update, :destroy]
 
+  PER_PAGE = 10
+
   def index
     @q = Post.ransack(params[:q])
-    @posts = @q.result.order(created_at: :desc).page(params[:page]).per(10)
+    @posts = @q.result.order(created_at: :desc).page(params[:page]).per(PER_PAGE)
     respond_to do |format|
       format.html
       format.js
