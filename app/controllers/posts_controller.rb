@@ -54,7 +54,10 @@ class PostsController < ApplicationController
   private
 
   def set_post
-    @post = Post.find(params[:id])
+    @post = Post.find_by(id: params[:id])
+    if @post.blank?
+      redirect_to posts_url, alert: "エラーが発生しました。表示できません。"
+    end
   end
 
   def post_params
