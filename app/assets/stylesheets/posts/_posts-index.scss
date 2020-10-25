@@ -145,11 +145,15 @@
           }
 
           .area-body {
+            width: 100%;
+
             .title {
               font-size: 1.1em;
 
               .link {
                 color: #232323;
+                display: block;
+                word-break: break-all;
               }
             }
 
