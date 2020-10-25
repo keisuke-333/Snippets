@@ -14,7 +14,7 @@
         </div>
 
         <div class="select-field">
-          <%= f.select :language, [ ['HTML', 'HTML'], ['CSS', 'CSS'], ['JavaScript', 'JavaScript'], ['Ruby', 'Ruby'] ], { include_blank: '言語を選択してください' }, required: true %>
+          <%= f.select :language, Post.languages.keys.to_a, { include_blank: '言語を選択してください' }, required: true %>
           <% if @post.errors.include?(:language) %>
             <p><%= @post.errors.full_messages_for(:language).first %></p>
           <% end %>
