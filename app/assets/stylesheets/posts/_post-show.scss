@@ -72,6 +72,7 @@
         font-size: 40px;
         line-height: 45px;
         width: 100%;
+        word-break: break-all;
 
         @media (max-width: 414px) {
           font-size: 30px;
