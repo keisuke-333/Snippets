@@ -4,6 +4,11 @@
     <% if resource.errors.any? %>
       <span class="error-messages"><%= resource.errors.full_messages.first %></span>
     <% end %>
+    <div class="back">
+      <%= link_to user_path(@user) do %>
+        <%= icon('fas', 'arrow-left', class: 'fa-lg') %>
+      <% end %>
+    </div>
     <div class="form">
       <%= form_for(resource, as: resource_name, url: update_user_registration_path, html: { method: :put }) do |f| %>
         <div class="area-image">

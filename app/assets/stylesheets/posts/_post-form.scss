@@ -6,12 +6,25 @@
     width: 100%;
   }
 
+  .back {
+    margin-top: 30px;
+    margin-bottom: 15px;
+    margin-left: 10px;
+
+    @media (max-width: 768px) {
+      margin-top: 10px;
+      margin-bottom: 10px;
+    }
+
+    a:hover {
+      opacity: 0.8;
+    }
+  }
+
   .form {
-    margin-top: 60px;
 
     @media (max-width: 1024px) {
       margin: 0 0.5em;
-      margin-top: 3em;
     }
 
     input,

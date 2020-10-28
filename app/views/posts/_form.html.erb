@@ -1,6 +1,11 @@
 <%= javascript_pack_tag 'code-textarea' %>
 
 <div class="post-form">
+  <div class="back">
+    <%= link_to 'javascript:history.back()' do %>
+      <%= icon('fas', 'arrow-left', class: 'fa-lg') %>
+    <% end %>
+  </div>
 
   <div class="form">
     <%= form_with model: @post, local: true do |f| %>
