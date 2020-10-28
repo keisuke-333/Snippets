@@ -1,5 +1,6 @@
 class UsersController < ApplicationController
   before_action :set_user
+  before_action :set_cache_headers
 
   PER_PAGE = 5
 
@@ -23,5 +24,9 @@ class UsersController < ApplicationController
 
   def set_user
     @user = User.find(params[:id])
+  end
+
+  def set_cache_headers
+    response.headers["Cache-Control"] = "no-store"
   end
 end
