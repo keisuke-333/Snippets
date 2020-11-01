@@ -1,20 +1,25 @@
 <%= javascript_pack_tag 'code-textarea' %>
 
 <div class="post-form">
+  <div class="back">
+    <%= link_to 'javascript:history.back()' do %>
+      <%= icon('fas', 'arrow-left', class: 'fa-lg') %>
+    <% end %>
+  </div>
 
   <div class="form">
     <%= form_with model: @post, local: true do |f| %>
 
       <div class="top">
         <div class="title-field">
-          <%= f.text_field :title, placeholder: "タイトル", required: true, maxlength: 50 %>
+          <%= f.text_field :title, placeholder: "タイトル", required: true, maxlength: Post::TITLE_MAXIMUM_LENGTH %>
           <% if @post.errors.include?(:title) %>
             <p><%= @post.errors.full_messages_for(:title).first %></p>
           <% end %>
         </div>
 
         <div class="select-field">
-          <%= f.select :language, [ ['HTML', 'HTML'], ['CSS', 'CSS'], ['JavaScript', 'JavaScript'], ['Ruby', 'Ruby'] ], { include_blank: '言語を選択してください' }, required: true %>
+          <%= f.select :language, Post.languages.keys.to_a, { include_blank: '言語を選択してください' }, required: true %>
           <% if @post.errors.include?(:language) %>
             <p><%= @post.errors.full_messages_for(:language).first %></p>
           <% end %>

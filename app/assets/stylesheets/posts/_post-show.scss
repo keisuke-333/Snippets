@@ -31,6 +31,18 @@
     .top {
       margin-bottom: 30px;
 
+      .back {
+        margin-bottom: 15px;
+        font-size: 0.9em;
+        display: flex;
+        justify-content: space-between;
+
+        a:hover {
+          opacity: 0.8;
+        }
+
+      }
+
       &__area {
         display: flex;
         justify-content: space-between;
@@ -72,6 +84,7 @@
         font-size: 40px;
         line-height: 45px;
         width: 100%;
+        word-break: break-all;
 
         @media (max-width: 414px) {
           font-size: 30px;

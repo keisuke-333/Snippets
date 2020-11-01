@@ -145,11 +145,15 @@
           }
 
           .area-body {
+            width: 100%;
+
             .title {
               font-size: 1.1em;
 
               .link {
                 color: #232323;
+                display: block;
+                word-break: break-all;
               }
             }
 
@@ -166,6 +170,12 @@
               }
             }
           }
+        }
+
+        .message-post-empty {
+          text-align: center;
+          margin-top: 60px;
+          color: #5f6c7b;
         }
       }
 

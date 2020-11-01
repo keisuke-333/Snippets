@@ -1,6 +1,17 @@
 <%= javascript_pack_tag 'tab-switch' %>
 
 <div class="user-show__top">
+  <div class="back">
+    <% if URI(request.referer).path == '/user' %>
+      <%= link_to posts_path do %>
+        <%= icon('fas', 'arrow-left', class: 'fa-lg') %>
+      <% end %>
+    <% else %>
+      <%= link_to 'javascript:history.back()' do %>
+        <%= icon('fas', 'arrow-left', class: 'fa-lg') %>
+      <% end %>
+    <% end %>
+  </div>
   <div class="area__image">
     <%= image_tag @user.image.url, class: "icon"%>
   </div>

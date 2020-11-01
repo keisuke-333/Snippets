@@ -1,5 +1,6 @@
 class Post < ApplicationRecord
-  validates :title, presence: true, length: { maximum: 50 }
+  enum language: { HTML: 0, CSS: 1, JavaScript: 2, Ruby: 3 }
+  validates :title, presence: true, length: { maximum: TITLE_MAXIMUM_LENGTH = 50 }
   validates :language, presence: true
   validates :code, presence: true
 
