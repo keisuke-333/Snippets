@@ -3,8 +3,14 @@
   <div class="main">
     <div class="top">
       <div class="back">
-        <%= link_to 'javascript:history.back()' do %>
-          <%= icon('fas', 'arrow-left', class: 'fa-lg') %>
+        <% if URI(request.referer).path == '/posts/new' %>
+          <%= link_to posts_path do %>
+            <%= icon('fas', 'arrow-left', class: 'fa-lg') %>
+          <% end %>
+        <% else %>
+          <%= link_to 'javascript:history.back()' do %>
+            <%= icon('fas', 'arrow-left', class: 'fa-lg') %>
+          <% end %>
         <% end %>
       </div>
       <div class="top__area">
