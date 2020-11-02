@@ -1,0 +1,17 @@
+<div class="switch">
+  <div class="link">
+    <%= sort_link(@q, :created_at, default_order: :desc) do %>
+      <%= icon('fas', 'history', class: 'fa-fw') %>
+    <% end %>
+  </div>
+  <div class="link">
+    <%= sort_link(@q, :impressions_count, default_order: :desc) do %>
+      <%= icon('far', 'eye', class: 'fa-fw') %>
+    <% end %>
+  </div>
+  <div class="link">
+    <%= sort_link(@q, :favorites_count, default_order: :desc) do %>
+      <%= icon('far', 'thumbs-up', class: 'fa-fw') %>
+    <% end %>
+  </div>
+</div>

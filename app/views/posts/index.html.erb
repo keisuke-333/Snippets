@@ -1,41 +1,10 @@
 <div class="posts-index">
   <div class="container">
+
     <div class="container__left">
-      <div class="select-language">
-        <div class="link">
-          <% if params[:q].present? && params[:q][:language_eq] == "HTML" %>
-            <%= icon('fas', 'check') %>
-          <% end %>
-          <%= link_to posts_path(@q, :'q[language_eq' => "HTML"), class: "html" do %>
-            <%= icon('fab', 'html5', class: 'fa-fw') %>
-          <% end %>
-        </div>
-        <div class="link">
-          <% if params[:q].present? && params[:q][:language_eq] == "CSS" %>
-            <%= icon('fas', 'check') %>
-          <% end %>
-          <%= link_to posts_path(@q, :'q[language_eq' => "CSS"), class: "css" do %>
-            <%= icon('fab', 'css3-alt', class: 'fa-fw') %>
-          <% end %>
-        </div>
-        <div class="link">
-          <% if params[:q].present? && params[:q][:language_eq] == "JavaScript" %>
-            <%= icon('fas', 'check') %>
-          <% end %>
-          <%= link_to posts_path(@q, :'q[language_eq' => "JavaScript"), class: "js" do %>
-            <%= icon('fab', 'js', class: 'fa-fw') %>
-          <% end %>
-        </div>
-        <div class="link">
-          <% if params[:q].present? && params[:q][:language_eq] == "Ruby" %>
-            <%= icon('fas', 'check') %>
-          <% end %>
-          <%= link_to posts_path(@q, :'q[language_eq' => "Ruby"), class: "ruby" do %>
-            <%= icon('fas', 'gem', class: 'fa-fw') %>
-          <% end %>
-        </div>
-      </div>
+      <%= render partial: "language" %>
     </div>
+
     <div class="container__center">
       <div class="reset-link-area">
         <% if params[:q].present? %>
@@ -49,30 +18,14 @@
           <%= f.search_field :title_or_code_cont, placeholder: "\uf002 キーワード検索", class: "fas" %>
         </div>
       <% end %>
-
       <div id="js-ajax-list">
         <%= render partial: "list" %>
       </div>
     </div>
 
     <div class="container__right">
-      <div class="switch">
-        <div class="link">
-          <%= sort_link(@q, :created_at, default_order: :desc) do %>
-            <%= icon('fas', 'history', class: 'fa-fw') %>
-          <% end %>
-        </div>
-        <div class="link">
-          <%= sort_link(@q, :impressions_count, default_order: :desc) do %>
-            <%= icon('far', 'eye', class: 'fa-fw') %>
-          <% end %>
-        </div>
-        <div class="link">
-          <%= sort_link(@q, :favorites_count, default_order: :desc) do %>
-            <%= icon('far', 'thumbs-up', class: 'fa-fw') %>
-          <% end %>
-        </div>
-      </div>
+      <%= render partial: "switch" %>
     </div>
+    
   </div>
 </div>
