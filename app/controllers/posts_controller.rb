@@ -6,7 +6,7 @@ class PostsController < ApplicationController
 
   def index
     @q = Post.ransack(params[:q])
-    @posts = @q.result.order(created_at: :desc).page(params[:page]).per(PER_PAGE)
+    @posts = @q.result.includes(:user, :favorites).order(created_at: :desc).page(params[:page]).per(PER_PAGE)
     respond_to do |format|
       format.html
       format.js

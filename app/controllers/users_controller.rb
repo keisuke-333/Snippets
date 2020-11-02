@@ -5,11 +5,11 @@ class UsersController < ApplicationController
   PER_PAGE = 5
 
   def show
-    @posts = @user.posts.order(created_at: :desc).page(params[:page]).per(PER_PAGE)
+    @posts = @user.posts.includes(:user, :favorites).order(created_at: :desc).page(params[:page]).per(PER_PAGE)
   end
 
   def favorites
-    @posts = @user.favorite_posts.order(created_at: :desc).page(params[:page]).per(PER_PAGE)
+    @posts = @user.favorite_posts.includes(:user, :favorites).order(created_at: :desc).page(params[:page]).per(PER_PAGE)
   end
 
   def followings
