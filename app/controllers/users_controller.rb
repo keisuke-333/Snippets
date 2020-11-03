@@ -25,7 +25,10 @@ class UsersController < ApplicationController
   private
 
   def set_user
-    @user = User.find(params[:id])
+    @user = User.find_by(id: params[:id])
+    if @user.blank?
+      redirect_to posts_url, alert: "エラーが発生しました。表示できません。"
+    end
   end
 
   def set_cache_headers
