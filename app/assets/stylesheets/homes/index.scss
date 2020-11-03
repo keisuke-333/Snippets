@@ -336,4 +336,133 @@
       }
     }
   }
+
+  .bottom {
+    .container {
+      width: 1000px;
+      margin: 0 auto;
+
+      @media (max-width: 812px) {
+        width: 100%;
+      }
+
+      @media (max-width: 414px) {
+        box-sizing: border-box;
+        padding-left: 5px;
+        padding-right: 5px;
+      }
+
+      .headline {
+        font-size: 3em;
+        color: #094067;
+        margin: 1.5em 0;
+        text-align: center;
+
+        @media (max-width: 812px) {
+          font-size: 2em;
+        }
+
+        @media (max-width: 768px) {
+          font-size: 2.2em;
+        }
+
+        @media (max-width: 414px) {
+          font-size: 2em;
+          margin-bottom: 1em;
+        }
+      }
+
+      .list {
+        width: 500px;
+        margin: 0 auto;
+        margin-bottom: 3em;
+
+        @media (max-width: 414px) {
+          width: 100%;
+        }
+
+        .item {
+          padding: 15px;
+          border-bottom: 1px solid #6665658f;
+          display: flex;
+          align-items: center;
+
+          .area-image {
+            margin-right: 1em;
+
+            .icon {
+              width: 50px;
+              height: 50px;
+              border-radius: 50%;
+              box-shadow: 0 0 3px gray;
+            }
+          }
+
+          .area-body {
+            width: 100%;
+
+            .title {
+              font-size: 1.1em;
+
+              .link {
+                color: #232323;
+                display: block;
+                word-break: break-all;
+              }
+            }
+
+            .details {
+              color: #8c9aaa;
+              font-size: 0.8em;
+
+              .date-time {
+                margin-right: 1em;
+              }
+
+              .view {
+                margin-right: 0.3em;
+              }
+            }
+          }
+        }
+
+        .message-post-empty {
+          text-align: center;
+          margin-top: 60px;
+          color: #5f6c7b;
+        }
+      }
+
+      .more-list {
+        text-align: center;
+        margin-bottom: 3em;
+
+        .btn {
+          display: inline-block;
+          text-decoration: none;
+          width: 230px;
+          height: 54px;
+          line-height: 54px;
+          background-color: #094067;
+          border: 2px solid #094067;
+          color: #fffffe;
+          border-radius: 30px;
+          transition: .3s;
+
+          @media (max-width: 414px) {
+            width: 180px;
+            height: 48px;
+            line-height: 48px;
+            font-size: 0.8em;
+          }
+
+          &:hover {
+            background-color: #fffffe;
+            border-color: #3da9fc;
+            color: #3da9fc;
+          }
+        }
+      }
+    }
+  }
 }

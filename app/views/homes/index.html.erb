@@ -72,4 +72,34 @@
       </div>
     </div>
   </section>
+
+  <section class="bottom">
+    <div class="container">
+      <h2 class="headline">
+        よく見られている投稿
+      </h2>
+      <div class="list">
+        <% @posts.each do |post| %>
+          <div class="item">
+            <div class="area-image">
+              <%= image_tag post.user.image.url, class: "icon" %>
+            </div>
+            <div class="area-body">
+              <div class="title">
+                <%= link_to post.title.truncate(40), post, class: "link" %>
+              </div>
+              <div class="details">
+                <span class="date-time"><%= icon('fas', 'paper-plane') %><%= time_ago_in_words post.created_at %>前</span>
+                <span class="view"><%= icon('far', 'eye') %><%= post.impressions_count %></span>
+                <span class="favorite"><%= icon('far', 'thumbs-up') %><%= post.favorites.size %></span>
+              </div>
+            </div>
+          </div>
+        <% end %>
+      </div>
+      <div class="more-list">
+        <%= link_to "ログインしてもっと見る", new_user_session_path, class: "btn" %>
+      </div>
+    </div>
+  </section>
 </div>
