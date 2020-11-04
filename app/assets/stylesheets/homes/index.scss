@@ -382,10 +382,19 @@
         }
 
         .item {
-          padding: 15px;
-          border-bottom: 1px solid #6665658f;
           display: flex;
-          align-items: center;
+          padding: 15px;
+          border-top: 1px solid #f8f5f2;
+          border-bottom: 1px solid #6665658f;
+          text-decoration: none;
+          transition: 0.3s;
+
+          &:hover {
+            background: #fffffe;
+            transition: 0.3s;
+            transform: translateY(-3px);
+            border-top: 1px solid #6665658f;
+          }
 
           &:first-child {
             border-top: 1px solid #6665658f;
@@ -407,15 +416,12 @@
 
             .title {
               font-size: 1.1em;
-
-              .link {
-                color: #232323;
-                display: block;
-                word-break: break-all;
-              }
+              color: #232323;
+              word-break: break-all;
             }
 
             .details {
+              display: flex;
               color: #8c9aaa;
               font-size: 0.8em;
 

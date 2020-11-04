@@ -3,21 +3,19 @@
 </div>
 <div class="list">
   <% @posts.each do |post| %>
-    <div class="item">
-      <div class="area-image">
-        <%= link_to (image_tag post.user.image.url, class: "icon"), user_path(post.user_id) %>
-      </div>
-      <div class="area-body">
-        <div class="title">
-          <%= link_to post.title.truncate(Post::TITLE_MAXIMUM_LENGTH), post, class: "link" %>
+      <%= link_to post, class: "item" do  %>
+        <div class="area-image">
+          <object><%= link_to (image_tag post.user.image.url, class: "icon"), user_path(post.user_id) %></object>
         </div>
-        <div class="details">
-          <span class="date-time"><%= icon('fas', 'paper-plane') %><%= time_ago_in_words post.created_at %>前</span>
-          <span class="view"><%= icon('far', 'eye') %><%= post.impressions_count %></span>
-          <span class="favorite"><%= icon('far', 'thumbs-up') %><%= post.favorites.size %></span>
+        <div class="area-body">
+          <div class="title"><%= post.title.truncate(Post::TITLE_MAXIMUM_LENGTH) %></div>
+          <div class="details">
+            <span class="date-time"><%= icon('fas', 'paper-plane') %><%= time_ago_in_words post.created_at %>前</span>
+            <span class="view"><%= icon('far', 'eye') %><%= post.impressions_count %></span>
+            <span class="favorite"><%= icon('far', 'thumbs-up') %><%= post.favorites.size %></span>
+          </div>
         </div>
-      </div>
-    </div>
+      <% end %>
   <% end %>
 </div>
 <%= paginate @posts, remote: true %>

@@ -123,10 +123,19 @@
         margin-bottom: 3em;
 
         .item {
-          padding: 15px;
-          border-bottom: 1px solid #6665658f;
           display: flex;
-          align-items: center;
+          padding: 15px;
+          border-top: 1px solid #f8f5f2;
+          border-bottom: 1px solid #6665658f;
+          text-decoration: none;
+          transition: 0.3s;
+
+          &:hover {
+            background: #fffffe;
+            transition: 0.3s;
+            transform: translateY(-3px);
+            border-top: 1px solid #6665658f;
+          }
 
           .area-image {
             margin-right: 1em;
@@ -136,10 +145,12 @@
               height: 50px;
               border-radius: 50%;
               box-shadow: 0 0 3px gray;
+              transition: 0.2s;
 
               &:hover {
                 opacity: 0.8;
-                transition: .1s;
+                box-shadow: 0 0 10px black;
+                transition: 0.2s;
               }
             }
           }
@@ -149,12 +160,8 @@
 
             .title {
               font-size: 1.1em;
-
-              .link {
-                color: #232323;
-                display: block;
-                word-break: break-all;
-              }
+              color: #232323;
+              word-break: break-all;
             }
 
             .details {
