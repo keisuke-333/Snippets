@@ -10,6 +10,8 @@ class Post < ApplicationRecord
 
   is_impressionable counter_cache: true
 
+  TRUNCATE_TITLE_LENGTH = 40
+
   def favorited_by?(user)
     favorites.where(user_id: user.id).exists?
   end
