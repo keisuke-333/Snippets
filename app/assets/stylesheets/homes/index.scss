@@ -387,6 +387,10 @@
           display: flex;
           align-items: center;
 
+          &:first-child {
+            border-top: 1px solid #6665658f;
+          }
+
           .area-image {
             margin-right: 1em;
 
