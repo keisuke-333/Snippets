@@ -92,7 +92,6 @@
 
       .post_search {
         padding-bottom: 0.5em;
-        border-bottom: 1px solid #6665658f;
 
         .input-field {
           padding: 1em;
@@ -119,6 +118,46 @@
         }
       }
 
+      .tab {
+        display: flex;
+        justify-content: space-between;
+        height: 30px;
+        line-height: 30px;
+        background-color: #deecf1;
+
+        .link {
+          width: 100%;
+          text-align: center;
+          border-top: 1px solid #6665658f;
+          border-left: 1px solid #6665658f;
+          border-right: 1px solid #6665658f;
+
+          @media (max-width: 414px) {
+            font-size: 1.2em;
+          }
+
+          &.checked {
+            background-color: #094067;
+
+            a {
+              color: #fffffe;
+            }
+          }
+
+          a {
+            display: block;
+            text-decoration: none;
+            color: #094067;
+
+            &:hover {
+              transition: .1s;
+              opacity: 0.9;
+              box-shadow: 0 0 .3em gray;
+            }
+          }
+        }
+      }
+
       .list {
         margin-bottom: 3em;
 
@@ -134,6 +173,10 @@
             background: #fffffe;
             transition: 0.3s;
             transform: translateY(-3px);
+            border-top: 1px solid #6665658f;
+          }
+
+          &:first-child {
             border-top: 1px solid #6665658f;
           }
 
