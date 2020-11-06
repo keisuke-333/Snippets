@@ -16,7 +16,7 @@
       <div class="top__area">
         <div class="left">
           <div class="area-language">
-            <%= @post.language %>
+            <%= language_icon(@post.language) %>
           </div>
           <div class="area-datetime">
             <%= l @post.updated_at, format: :date %>に更新
