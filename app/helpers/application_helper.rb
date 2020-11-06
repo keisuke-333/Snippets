@@ -5,13 +5,14 @@ module ApplicationHelper
   end
 
   def language_icon(language)
-    if language == "HTML"
+    case language
+    when "HTML"
       icon("fab", "html5", class: "fa-fw fa-lg html")
-    elsif language == "CSS"
+    when "CSS"
       icon("fab", "css3-alt", class: "fa-fw fa-lg css")
-    elsif language == "JavaScript"
+    when "JavaScript"
       icon("fab", "js", class: "fa-fw fa-lg js")
-    elsif language == "Ruby"
+    when "Ruby"
       icon("fas", "gem", class: "fa-fw fa-lg ruby")
     end
   end
