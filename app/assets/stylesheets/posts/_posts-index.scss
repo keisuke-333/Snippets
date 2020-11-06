@@ -124,13 +124,11 @@
         height: 30px;
         line-height: 30px;
         background-color: #deecf1;
+        margin-bottom: 20px;
 
         .link {
           width: 100%;
           text-align: center;
-          border-top: 1px solid #6665658f;
-          border-left: 1px solid #6665658f;
-          border-right: 1px solid #6665658f;
 
           @media (max-width: 414px) {
             font-size: 1.2em;
@@ -169,14 +167,14 @@
           text-decoration: none;
           transition: 0.3s;
 
+          &:first-child {
+            border-top: 1px solid #6665658f;
+          }
+
           &:hover {
             background: #fffffe;
             transition: 0.3s;
             transform: translateY(-3px);
-            border-top: 1px solid #6665658f;
-          }
-
-          &:first-child {
             border-top: 1px solid #6665658f;
           }
 
