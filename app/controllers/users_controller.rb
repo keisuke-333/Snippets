@@ -2,7 +2,6 @@ class UsersController < ApplicationController
   before_action :authenticate_user!
 
   before_action :set_user
-  before_action :set_cache_headers
 
   PER_PAGE = 5
 
@@ -29,9 +28,5 @@ class UsersController < ApplicationController
     if @user.blank?
       redirect_to posts_url, alert: "エラーが発生しました。表示できません。"
     end
-  end
-
-  def set_cache_headers
-    response.headers["Cache-Control"] = "no-store"
   end
 end
