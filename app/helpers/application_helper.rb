@@ -14,6 +14,12 @@ module ApplicationHelper
       icon("fab", "js", class: "fa-fw fa-lg js")
     when "Ruby"
       icon("fas", "gem", class: "fa-fw fa-lg ruby")
+    when "PHP"
+      icon("fab", "php", class: "fa-fw fa-lg php")
+    when "SQL"
+      icon("fas", "database", class: "fa-fw fa-lg sql")
+    when "Git"
+      icon("fab", "git-square", class: "fa-fw fa-lg git")
     end
   end
 end
