@@ -1,15 +1,16 @@
 class UsersController < ApplicationController
+  before_action :authenticate_user!
+
   before_action :set_user
-  before_action :set_cache_headers
 
   PER_PAGE = 5
 
   def show
-    @posts = @user.posts.order(created_at: :desc).page(params[:page]).per(PER_PAGE)
+    @posts = @user.posts.includes(:user, :favorites).order(created_at: :desc).page(params[:page]).per(PER_PAGE)
   end
 
   def favorites
-    @posts = @user.favorite_posts.order(created_at: :desc).page(params[:page]).per(PER_PAGE)
+    @posts = @user.favorite_posts.includes(:user, :favorites).order(created_at: :desc).page(params[:page]).per(PER_PAGE)
   end
 
   def followings
@@ -23,10 +24,9 @@ class UsersController < ApplicationController
   private
 
   def set_user
-    @user = User.find(params[:id])
-  end
-
-  def set_cache_headers
-    response.headers["Cache-Control"] = "no-store"
+    @user = User.find_by(id: params[:id])
+    if @user.blank?
+      redirect_to posts_url, alert: "エラーが発生しました。表示できません。"
+    end
   end
 end

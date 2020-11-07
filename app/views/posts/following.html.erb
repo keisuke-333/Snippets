@@ -3,28 +3,28 @@
 
     <div class="container__left">
       <div class="select-language">
-        <%= render partial: "language-posts" %>
+        <%= render partial: "language-following" %>
       </div>
     </div>
 
     <div class="container__center">
       <div class="reset-link-area">
         <% if params[:q].present? %>
-          <%= link_to posts_path, class: "link" do %>
+          <%= link_to following_posts_path, class: "link" do %>
             <%= icon('fas', 'search-minus', class: 'fa-fw fa-lg' ) %>検索リセット
           <% end%>
         <% end %>
       </div>
-      <%= search_form_for(@q, url:posts_path) do |f| %>
+      <%= search_form_for(@q, url:following_posts_path) do |f| %>
         <div class="input-field">
           <%= f.search_field :title_or_code_cont, placeholder: "\uf002 キーワード検索", class: "fas" %>
         </div>
       <% end %>
       <div class="tab">
-        <div class="link checked">
+        <div class="link">
           <%= link_to "全件", posts_path %>
         </div>
-        <div class="link">
+        <div class="link checked">
           <%= link_to "フォロー済み", following_posts_path %>
         </div>
       </div>

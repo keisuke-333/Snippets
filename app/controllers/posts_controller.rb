@@ -1,16 +1,17 @@
 class PostsController < ApplicationController
-  before_action :authenticate_user!
+  before_action :authenticate_user!, except: :show
   before_action :set_post, only: [:show, :edit, :update, :destroy]
 
   PER_PAGE = 10
 
   def index
     @q = Post.ransack(params[:q])
-    @posts = @q.result.order(created_at: :desc).page(params[:page]).per(PER_PAGE)
-    respond_to do |format|
-      format.html
-      format.js
-    end
+    @posts = @q.result.includes(:user, :favorites).order(created_at: :desc).page(params[:page]).per(PER_PAGE)
+  end
+
+  def following
+    @q = Post.ransack(params[:q])
+    @posts = @q.result.includes(:user, :favorites).where(user_id: [*current_user.following_ids]).order(created_at: :desc).page(params[:page]).per(PER_PAGE)
   end
 
   def new

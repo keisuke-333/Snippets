@@ -58,6 +58,18 @@
           .ruby {
             color: rgb(212, 81, 125);
           }
+
+          .php {
+            color: #423783;
+          }
+
+          .sql {
+            color: #39faba;
+          }
+
+          .git {
+            color: dimgray;
+          }
         }
       }
     }
@@ -92,7 +104,6 @@
 
       .post_search {
         padding-bottom: 0.5em;
-        border-bottom: 1px solid #6665658f;
 
         .input-field {
           padding: 1em;
@@ -119,14 +130,65 @@
         }
       }
 
+      .tab {
+        display: flex;
+        justify-content: space-between;
+        height: 30px;
+        line-height: 30px;
+        background-color: #deecf1;
+        margin-bottom: 20px;
+
+        .link {
+          width: 100%;
+          text-align: center;
+
+          @media (max-width: 414px) {
+            font-size: 1.2em;
+          }
+
+          &.checked {
+            background-color: #094067;
+
+            a {
+              color: #fffffe;
+            }
+          }
+
+          a {
+            display: block;
+            text-decoration: none;
+            color: #094067;
+
+            &:hover {
+              transition: .1s;
+              opacity: 0.9;
+              box-shadow: 0 0 .3em gray;
+            }
+          }
+        }
+      }
+
       .list {
         margin-bottom: 3em;
 
         .item {
-          padding: 15px;
-          border-bottom: 1px solid #6665658f;
           display: flex;
-          align-items: center;
+          padding: 15px;
+          border-top: 1px solid #f8f5f2;
+          border-bottom: 1px solid #6665658f;
+          text-decoration: none;
+          transition: 0.3s;
+
+          &:first-child {
+            border-top: 1px solid #6665658f;
+          }
+
+          &:hover {
+            background: #fffffe;
+            transition: 0.3s;
+            transform: translateY(-3px);
+            border-top: 1px solid #6665658f;
+          }
 
           .area-image {
             margin-right: 1em;
@@ -136,10 +198,12 @@
               height: 50px;
               border-radius: 50%;
               box-shadow: 0 0 3px gray;
+              transition: 0.2s;
 
               &:hover {
                 opacity: 0.8;
-                transition: .1s;
+                box-shadow: 0 0 10px black;
+                transition: 0.2s;
               }
             }
           }
@@ -149,11 +213,35 @@
 
             .title {
               font-size: 1.1em;
+              color: #232323;
+              word-break: break-all;
 
-              .link {
-                color: #232323;
-                display: block;
-                word-break: break-all;
+              .html {
+                color: rgb(250, 96, 96);
+              }
+
+              .css {
+                color: #1094f8;
+              }
+
+              .js {
+                color: rgb(236, 196, 15);
+              }
+
+              .ruby {
+                color: rgb(212, 81, 125);
+              }
+
+              .php {
+                color: #423783;
+              }
+
+              .sql {
+                color: #39faba;
+              }
+
+              .git {
+                color: dimgray;
               }
             }
 

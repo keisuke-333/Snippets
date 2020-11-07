@@ -1,11 +1,22 @@
-<% if @post.favorited_by?(current_user) %>
-  <%= link_to post_favorites_path(@post.id), method: :delete, remote: true, class: "fav" do %>
-    <%= icon('fas', 'thumbs-up', class: 'fa-fw') %>
+<% if user_signed_in? %>
+
+  <% if @post.favorited_by?(current_user) %>
+    <%= link_to post_favorites_path(@post.id), method: :delete, remote: true, class: "fav" do %>
+      <%= icon('fas', 'thumbs-up', class: 'fa-fw') %>
+    <% end %>
+    <span><%= @post.favorites.count %></span>
+  <% else %>
+    <%= link_to post_favorites_path(@post.id), method: :post, remote: true, class: "fav" do %>
+      <%= icon('far', 'thumbs-up', class: 'fa-fw') %>
+    <% end %>
+    <span><%= @post.favorites.count %></span>
   <% end %>
-  <span><%= @post.favorites.count %></span>
-<% else %>
-  <%= link_to post_favorites_path(@post.id), method: :post, remote: true, class: "fav" do %>
+
+<% else%>
+
+  <%= link_to post_favorites_path(@post.id), method: :post, class: "fav" do %>
     <%= icon('far', 'thumbs-up', class: 'fa-fw') %>
   <% end %>
   <span><%= @post.favorites.count %></span>
+  
 <% end %>

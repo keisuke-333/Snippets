@@ -2,7 +2,7 @@
 
 <div class="user-show__top">
   <div class="back">
-    <% if URI(request.referer).path == '/user' %>
+    <% if URI(request.referer.to_s).path == '/user' %>
       <%= link_to posts_path do %>
         <%= icon('fas', 'arrow-left', class: 'fa-lg') %>
       <% end %>

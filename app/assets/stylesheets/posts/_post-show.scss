@@ -51,15 +51,34 @@
         .left {
 
           .area-language {
-            display: inline-block;
-            background: #094067;
-            color: #fffffe;
-            padding: 0 0.5em;
-            border-radius: 0.2em;
-            margin-right: 2em;
+            font-size: 1.5em;
 
-            @media (max-width: 414px) {
-              margin: 0;
+            .html {
+              color: rgb(250, 96, 96);
+            }
+
+            .css {
+              color: #1094f8;
+            }
+
+            .js {
+              color: rgb(236, 196, 15);
+            }
+
+            .ruby {
+              color: rgb(212, 81, 125);
+            }
+
+            .php {
+              color: #423783;
+            }
+
+            .sql {
+              color: #39faba;
+            }
+
+            .git {
+              color: dimgray;
             }
           }
 

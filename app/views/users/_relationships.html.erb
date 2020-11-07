@@ -3,19 +3,21 @@
 </div>
 <div class="list">
   <% @relationships.each do |user| %>
-    <div class="item">
+    <%= link_to user, class: "item" do  %>
       <div class="area-image">
-        <%= link_to (image_tag user.image.url, class: "icon"), user_path(user.id) %>
+        <%= image_tag user.image.url, class: "img" %>
       </div>
       <div class="area-body">
-        <div class="title">
-          <%= link_to user.name, user, class: "link" %>
-        </div>
+        <div class="title"><%= user.name %></div>
         <div class="details">
-          <%= user.profile %>
+          <% if user.profile.present? %>
+            <%= user.profile %>
+          <% else %>
+            プロフィール未登録
+          <% end %>
         </div>
       </div>
-    </div>
+    <% end %>
   <% end %>
 </div>
 <%= paginate @relationships, remote: true %>

@@ -184,7 +184,6 @@
       .count {
         text-align: center;
         padding-bottom: 0.5em;
-        border-bottom: 1px solid #6665658f;
 
         @media (max-width: 414px) {
           padding: 0.5em 0;
@@ -193,26 +192,51 @@
       }
 
       .list {
+        width: 500px;
+        margin: 0 auto;
         margin-bottom: 2em;
+
+        @media (max-width: 414px) {
+          width: 100%;
+        }
 
         .item {
           padding: 15px;
           border-bottom: 1px solid #6665658f;
+          border-top: 1px solid #f8f5f2;
           display: flex;
-          align-items: center;
+          text-decoration: none;
+          transition: 0.3s;
+
+          &:hover {
+            background: #fffffe;
+            transition: 0.3s;
+            transform: translateY(-3px);
+            border-top: 1px solid #6665658f;
+          }
+
+          &:first-child {
+            border-top: 1px solid #6665658f;
+          }
 
           .area-image {
             margin-right: 1em;
 
-            .icon {
+            .icon,
+            .img {
               width: 50px;
               height: 50px;
               border-radius: 50%;
               box-shadow: 0 0 3px gray;
+            }
+
+            .icon {
+              transition: 0.2s;
 
               &:hover {
                 opacity: 0.8;
-                transition: .1s;
+                box-shadow: 0 0 10px black;
+                transition: 0.2s;
               }
             }
           }
@@ -222,11 +246,35 @@
 
             .title {
               font-size: 1.1em;
+              color: #232323;
+              word-break: break-all;
 
-              .link {
-                color: #232323;
-                display: block;
-                word-break: break-all;
+              .html {
+                color: rgb(250, 96, 96);
+              }
+
+              .css {
+                color: #1094f8;
+              }
+
+              .js {
+                color: rgb(236, 196, 15);
+              }
+
+              .ruby {
+                color: rgb(212, 81, 125);
+              }
+
+              .php {
+                color: #423783;
+              }
+
+              .sql {
+                color: #39faba;
+              }
+
+              .git {
+                color: dimgray;
               }
             }
 
