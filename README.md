@@ -33,7 +33,6 @@ Webサービスを作ってみようと思い、こちらのアプリを作成�
 - impressionist
 - ransack
 - kaminari
-- qiita-markdown
 
 ## ER図
 ![snippets](https://user-images.githubusercontent.com/65392082/96097885-74e32700-0f0c-11eb-8834-416845698bc0.png)
