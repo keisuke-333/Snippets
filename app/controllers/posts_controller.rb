@@ -1,6 +1,7 @@
 class PostsController < ApplicationController
   before_action :authenticate_user!, except: :show
   before_action :set_post, only: [:show, :edit, :update, :destroy]
+  before_action :identity_verification, only: [:edit, :update, :destroy]
 
   PER_PAGE = 10
 
@@ -34,9 +35,6 @@ class PostsController < ApplicationController
   end
 
   def edit
-    if @post.user_id != current_user.id
-      redirect_to posts_url, alert: "エラーが発生しました。表示できません。"
-    end
   end
 
   def update
@@ -67,5 +65,11 @@ class PostsController < ApplicationController
 
   def search_params
     params.require(:q).permit(:title_or_code_cont)
+  end
+
+  def identity_verification
+    if @post.user_id != current_user.id
+      redirect_to posts_url, alert: "エラーが発生しました。"
+    end
   end
 end

@@ -3,7 +3,7 @@
   <div class="main">
     <div class="top">
       <div class="back">
-        <% if URI(request.referer.to_s).path == '/posts/new' %>
+        <% if URI(request.referer.to_s).path == "/posts/new" || URI(request.referer.to_s).path == "/posts/#{@post.id}/edit" %>
           <%= link_to posts_path do %>
             <%= icon('fas', 'arrow-left', class: 'fa-lg') %>
           <% end %>

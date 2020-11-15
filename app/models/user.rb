@@ -4,7 +4,10 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
 
-  validates :name, presence: true
+  VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i.freeze
+
+  validates :name, presence: true, length: { maximum: 30 }
+  validates :email, presence: true, uniqueness: true, length: { maximum: 100 }, format: { with: VALID_EMAIL_REGEX }
   validates :profile, length: { maximum: 200 }
   mount_uploader :image, ImageUploader
 
@@ -26,7 +29,7 @@ class User < ApplicationRecord
       params.delete(:password_confirmation)
     end
 
-    result = update_attributes(params, *options)
+    result = update(params, *options)
     clean_up_passwords
     result
   end

@@ -45,6 +45,15 @@ gem 'github-linguist'
 
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
+  # Rails用のテストフレームワーク
+  gem 'rspec-rails'
+  # モデルに関するテストデータ作成用
+  gem 'factory_bot_rails'
+  # ダミーデータの生成
+  gem 'faker'
+  # デバッグ用
+  gem 'pry-byebug'
+  gem 'pry-doc'
 end
 
 group :development do

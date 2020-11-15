@@ -11,9 +11,9 @@
 <% end -%>
 
 <%- if devise_mapping.recoverable? && controller_name != 'passwords' && controller_name != 'registrations' %>
-  <div class="link-description">
-    <span>パスワードを忘れた場合は </span><%= link_to "こちら", new_password_path(resource_name) %>
-  </div>
+  <%# <div class="link-description"> %>
+    <%# <span>パスワードを忘れた場合は </span><%= link_to "こちら", new_password_path(resource_name) %>
+  <%# </div> %>
 <% end %>
 
 <%- if devise_mapping.confirmable? && controller_name != 'confirmations' %>
