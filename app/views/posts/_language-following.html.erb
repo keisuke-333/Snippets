@@ -30,3 +30,27 @@
     <%= icon('fas', 'gem', class: 'fa-fw') %>
   <% end %>
 </div>
+<div class="link">
+  <% if params[:q].present? && params[:q][:language_eq] == "4" %>
+    <%= icon('fas', 'check') %>
+  <% end %>
+  <%= link_to following_posts_path(@q, :'q[language_eq' => "4"), class: "php" do %>
+    <%= icon('fab', 'php', class: 'fa-fw') %>
+  <% end %>
+</div>
+<div class="link">
+  <% if params[:q].present? && params[:q][:language_eq] == "5" %>
+    <%= icon('fas', 'check') %>
+  <% end %>
+  <%= link_to following_posts_path(@q, :'q[language_eq' => "5"), class: "sql" do %>
+    <%= icon('fas', 'database', class: 'fa-fw') %>
+  <% end %>
+</div>
+<div class="link">
+  <% if params[:q].present? && params[:q][:language_eq] == "6" %>
+    <%= icon('fas', 'check') %>
+  <% end %>
+  <%= link_to following_posts_path(@q, :'q[language_eq' => "6"), class: "git" do %>
+    <%= icon('fab', 'git-square', class: 'fa-fw') %>
+  <% end %>
+</div>
