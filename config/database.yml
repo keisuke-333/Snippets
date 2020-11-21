@@ -81,5 +81,6 @@ test:
 production:
   <<: *default
   database: snippets_production
-  username: snippets
-  password: <%= ENV['SNIPPETS_DATABASE_PASSWORD'] %>
+  username: postgres
+  password: <%= Rails.application.credentials.db[:password] %>
+  host: <%= Rails.application.credentials.db[:hostname] %>
