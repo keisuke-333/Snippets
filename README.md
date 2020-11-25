@@ -5,7 +5,7 @@ AWS：https://snippets-webdev.com/
 Heroku：https://snippets-for-webdevel.herokuapp.com/  
 ※ゲストユーザーとしてログインすることができます。
 
-### アプリ概要
+## アプリ概要
 
 Webエンジニアを目指す初心者の人が、  
 学習したコード内容を気軽にメモとして投稿することができ、  
