@@ -11,7 +11,7 @@ Webエンジニアを目指す初心者の人が、
 学習したコード内容を気軽にメモとして投稿することができ、  
 他人に公開し、共有することができるサービスです。  
 
-<img width="1443" alt="img" src="https://user-images.githubusercontent.com/65392082/96006377-62b7a900-0e78-11eb-9e64-d7479ee0db6a.png">
+![img_1](https://user-images.githubusercontent.com/65392082/100221677-5b49ec00-2f5c-11eb-86fd-2ee1fb86c75b.gif)
 
 ## 作成した経緯
 Webエンジニアを目指す初心者の人が、  
