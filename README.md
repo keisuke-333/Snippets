@@ -37,7 +37,7 @@ Webサービスを作ってみようと思い、こちらのアプリを作成�
 - postgresql
 
 ### 本番環境
-AWS （ VPC | RDS | EC2 | Route 53 | ACM | ALB | S3 | IAM | CloudFront ）
+AWS （ VPC | RDS | EC2 | Route 53 | ACM | ALB | S3 | IAM | CloudFront ）  
 Webサーバ：Nginx
 
 ### gem
