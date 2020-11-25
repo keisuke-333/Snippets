@@ -4,7 +4,8 @@ Webエンジニアを目指す初心者の人が、
 他人に公開し、共有することができるサービスです。  
 
 ### URL 
-https://snippets-for-webdevel.herokuapp.com/
+Heroku：https://snippets-for-webdevel.herokuapp.com/  
+AWS：https://snippets-webdev.com/
 
 <img width="1443" alt="img" src="https://user-images.githubusercontent.com/65392082/96006377-62b7a900-0e78-11eb-9e64-d7479ee0db6a.png">
 
