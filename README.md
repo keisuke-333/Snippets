@@ -14,6 +14,9 @@ Webエンジニアを目指す初心者の人が、
 #### トップ画面
 ![img_1](https://user-images.githubusercontent.com/65392082/100221677-5b49ec00-2f5c-11eb-86fd-2ee1fb86c75b.gif)
 
+#### ログイン後の画面
+![img_2](https://user-images.githubusercontent.com/65392082/100231757-cb5f6e80-2f6a-11eb-837e-a675425c499a.gif)
+
 ## 作成した経緯
 Webエンジニアを目指す初心者の人が、  
 技術ブログに投稿するほどでもない簡単なコード内容を  
