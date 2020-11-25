@@ -1,11 +1,15 @@
 # snippet
-Webエンジニアを目指す初心者の人が、  
-学習したコード内容を気軽にメモとして投稿することができ、  
-他人に公開し、共有することができるサービスです。  
 
 ### URL 
 Heroku：https://snippets-for-webdevel.herokuapp.com/  
-AWS：https://snippets-webdev.com/
+AWS：https://snippets-webdev.com/  
+※ゲストユーザーとしてログインすることができます。
+
+### アプリ概要
+
+Webエンジニアを目指す初心者の人が、  
+学習したコード内容を気軽にメモとして投稿することができ、  
+他人に公開し、共有することができるサービスです。  
 
 <img width="1443" alt="img" src="https://user-images.githubusercontent.com/65392082/96006377-62b7a900-0e78-11eb-9e64-d7479ee0db6a.png">
 
