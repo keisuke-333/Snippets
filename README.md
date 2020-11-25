@@ -11,10 +11,10 @@ Webエンジニアを目指す初心者の人が、
 学習したコード内容を気軽にメモとして投稿することができ、  
 他人に公開し、共有することができるサービスです。  
 
-#### トップ画面
+トップ画面
 ![img_1](https://user-images.githubusercontent.com/65392082/100221677-5b49ec00-2f5c-11eb-86fd-2ee1fb86c75b.gif)
 
-#### ログイン後の画面
+ログイン後の画面
 ![img_2](https://user-images.githubusercontent.com/65392082/100231757-cb5f6e80-2f6a-11eb-837e-a675425c499a.gif)
 
 ## 作成した経緯
