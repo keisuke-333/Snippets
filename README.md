@@ -27,8 +27,8 @@ Webサービスを作ってみようと思い、こちらのアプリを作成�
 - postgresql
 
 ### 本番環境
+- AWS
 - Heroku
-- AWSサービス（S3・CloudFront・IAM）
 
 ### gem
 - devise 4.7.2
