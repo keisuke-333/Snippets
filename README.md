@@ -54,7 +54,7 @@ Webサーバ：Nginx
 - kaminari
 
 # ER図
-![snippets](https://user-images.githubusercontent.com/65392082/96097885-74e32700-0f0c-11eb-8834-416845698bc0.png)
+![Untitled Diagram](https://user-images.githubusercontent.com/65392082/100249347-cce76180-2f7f-11eb-813c-3052b044a4be.png)
 
 # AWS構成図
 ![aws_configuration_diagram](https://user-images.githubusercontent.com/65392082/100243654-7414ca80-2f79-11eb-9d82-5d7acb468496.png)
