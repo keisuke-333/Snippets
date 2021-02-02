@@ -33,8 +33,6 @@ Webサービスを作ってみようと思い、こちらのアプリを作成�
 - GitHubに定期的にpushをし、バージョン管理された状態で作成
 
 ## 環境
-- macOS Catalina 10.15.5
-- Visual Studio Code
 - ruby 2.6.6
 - rails 6.0.3.2
 - postgresql
