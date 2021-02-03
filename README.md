@@ -1,10 +1,5 @@
 # snippet
 
-### URL 
-AWS：https://snippets-webdev.com/  
-Heroku：https://snippets-for-webdevel.herokuapp.com/  
-※ゲストユーザーとしてログインすることができます。
-
 ## アプリ概要
 
 Webエンジニアを目指す初心者の人が、  
